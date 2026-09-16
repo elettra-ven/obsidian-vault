@@ -143,7 +143,7 @@ More generally, if $\mathbf{A}\in\mathbb{R}^{n\times m}$, then
 $$
 \mathbf{A}\mathbf{I}_m=\mathbf{I}_n\mathbf{A}=\mathbf{A}.
 $$
-
+The order of the multiplication matters.
 
 ## Some Special Types of Matrices
 
@@ -162,7 +162,6 @@ $$
 $$
 \mathbf{x}^\top \mathbf{A} \mathbf{x} > 0 \quad \text{for all } \mathbf{x} \neq \mathbf{0}.
 $$
-
 
 
 ## Rank of a Matrix
@@ -184,7 +183,7 @@ Additional properties:
 
 For a square matrix, full rank is closely tied to invertibility.
 
-## Determinant
+## Determinant ($|\mathbf{A}|$)
 
 The determinant associates a scalar to a square matrix. It is denoted either $|\mathbf{A}|$ or $\det(\mathbf{A})$.
 
@@ -206,9 +205,9 @@ Key properties:
 - $|\alpha\mathbf{A}| = \alpha^n |\mathbf{A}|$ for an $n \times n$ matrix,
 - $|\mathbf{I}_n|=1$.
 
-A square matrix is singular if and only if its determinant is zero.
+>[!NOTE] A square matrix is **singular** if and only if its determinant is zero.
 
-**Suggested Exercise 4.**
+==**Suggested Exercise 4.**==
 
 # Matrix Operations
 
