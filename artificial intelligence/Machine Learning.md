@@ -1,3 +1,5 @@
+It's a field of study that gives computers the ability to learn without being explicitly programmed.
+
 >[!info] Definition 1
 >"Learning is constructing or modifying representations of what is being experienced."
 
@@ -70,4 +72,5 @@ Representation is implicitly distributed in different layers.
 
 No labels are needed, the feature are extracted by network during the **unsupervised learning**. These features are unknown due to the **black-box** nature of DL architectures. 
 The following phase is the **fine tuning**, where performances are improved with a hybrid learning method that is both supervised and unsupervised.
+
 

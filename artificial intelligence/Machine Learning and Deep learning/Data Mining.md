@@ -68,6 +68,7 @@ Unstructured decisions are made "on the fly", and require a knowledge of the ext
 - **Predictive**:
 	Answer the question "What's going to happen?".
 	They calculate the most probable value of a variable in a future time, given the history of a set (sequence) of variables.
+	It's also where [[Machine Learning]] lives.
 - **Prescriptive**:
 	Answer the question "How can we make something happen?".
 	They suggest actions to be taken to obtain the desired effect, choose among options and strategies and optimize.
@@ -100,3 +101,39 @@ The current consensus sees Data Mining as the discovery process from data source
 We can select data according to our ML task. 
 Then ML extracts the patterns and models to be evaluated (probabilistic or statistical evaluations) and trigger some type of action (whether it's a enterprise action or a personal decision).
 The resulting informed decision changes the state of the system, and the cycle repeats for the next evaluation.
+
+## Examples
+$\rightarrow$ [[Running example - Nordic Mart]]
+
+>Data mining can be used to extract **actionable** patterns or knowledge from existing data.
+
+To be "actionable", a pattern must be useful for enterprise decision-making:
+- The pattern must have a good percentage of certainty.
+- Timing must be relevant to the problem.
+
+>[!note] **Supervised activities** in Data Mining
+Ground Truths are provided to the system in a controlled, labelled way. This data is necessary to produce an informed forecast.
+
+## CRISP-DM Standard Process
+*CRoss-Industry Standard Process for Data Mining*
+During the development of a project there has to be a cooperation between different subjects, such as tech, law, marketing, etc ...
+To allow the different parts to work together they have to speak a **common tongue** $\implies$ a **standard**.
+
++ ### CRISP-DM cycle
+	It focuses on **data-driven decisions**.
+![[Pasted image 20260917154747.png|324]]
+
+1. **Business Understanding** 
+	What problem are we actually solving.
+2. **Data Understanding** 
+	What data do we have, is it any good.
+3. **Data Preparation** 
+	Clean, join, transform for modelling.
+4. **Modelling** 
+	Apply the mining / ML technique.
+5. **Evaluation** 
+	Does the result actually answer the business question.
+6. **Deployment** 
+	Put it to use, and keep it working.
+
+The third step, **Data Preparation**, is the most expensive and consuming phase of the cycle. It should take up to $60-80\%$ of project time.
