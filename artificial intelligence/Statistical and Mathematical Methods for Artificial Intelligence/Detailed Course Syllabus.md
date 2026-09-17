@@ -5,19 +5,19 @@
 
 #### Autumn Semester 2026
 
-- [1 Course Overview](#course-overview)
-    - [1.1 Course Structure](#course-structure)
-    - [1.2 Overall Learning Objectives](#overall-learning-objectives)
-    - [1.3 Learning Progression Across the Course](#learning-progression-across-the-course)
-- [2 Module 1: Basics of Linear Algebra](#module-1-basics-of-linear-algebra)
-    - [2.1 Module Purpose](#module-purpose)
-    - [2.2 Learning Objectives](#learning-objectives)
-    - [2.3 Detailed Content](#detailed-content)
-        - [2.3.1 1. Matrix notation and basic operations](#matrix-notation-and-basic-operations)
-        - [2.3.2 2. Rank, determinants, and linear systems](#rank-determinants-and-linear-systems)
-        - [2.3.3 3. Trace, block structure, and Kronecker products](#trace-block-structure-and-kronecker-products)
-        - [2.3.4 4. Norms and distances](#norms-and-distances)
-        - [2.3.5 5. Matrix decompositions](#matrix-decompositions)
+- 1 Course Overview
+    - 1.1 Course Structure
+    - 1.2 Overall Learning Objectives
+    - 1.3 Learning Progression Across the Course
+- 2 Module 1: Basics of Linear Algebra
+    - 2.1 Module Purpose
+    - 2.2 Learning Objectives
+    - 2.3 Detailed Content
+        - 2.3.1 1. Matrix notation and basic operations
+        - 2.3.2 2. Rank, determinants, and linear systems
+        - 2.3.3 3. Trace, block structure, and Kronecker products
+        - 2.3.4 4. Norms and distances
+        - 2.3.5 5. Matrix decompositions
         - [2.3.6 6. Vector calculus](#vector-calculus)
         - [2.3.7 7. Computational work in `R`](#computational-work-in-r)
     - [2.4 Connection to Later Modules](#connection-to-later-modules)
@@ -78,7 +78,7 @@ Throughout the course, theoretical ideas are paired with reproducible illustrati
 
 | Module | Title                                   | Central question                                                                                                                       |
 | :----- | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | [[Module 1 -- Basics of Linear Algebra]] | Which algebraic and differential tools are needed to formulate and solve statistical-learning problems?                                |
+| 1      | [[Module 1 - Basics of Linear Algebra]] | Which algebraic and differential tools are needed to formulate and solve statistical-learning problems?                                |
 | 2      | Principal Component Analysis            | How can high-dimensional data be projected onto a lower-dimensional subspace while retaining as much information as possible?          |
 | 3      | Introduction to Statistics              | How do probability models, estimators, sampling distributions, and confidence intervals connect data to unknown population quantities? |
 | 4      | Regression Models                       | How can a response be explained and predicted from covariates while controlling model complexity and checking model assumptions?       |

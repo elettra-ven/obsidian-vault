@@ -29,7 +29,7 @@ Throughout this module, we use the following conventions:
 - $\|\mathbf{x}\|_2$ denotes the Euclidean norm;
 - matrix dimensions are written explicitly when useful, for example $\mathbf{A}\in\mathbb{R}^{n\times p}$.
 
-
+---
 # Matrices
 
 ## Definition
@@ -166,7 +166,7 @@ $$
 
 ## Rank of a Matrix
 
-The rank of a matrix, denoted $\operatorname{rank}(\mathbf{A})$, is the number of linearly independent columns of $\mathbf{A}$. Equivalently, it is also the number of linearly independent rows.
+>[!NOTE] The rank of a matrix, denoted $\operatorname{rank}(\mathbf{A})$, is the number of linearly independent columns of $\mathbf{A}$. Equivalently, it is also the number of linearly independent rows.
 
 Important facts:
 
@@ -209,6 +209,7 @@ Key properties:
 
 ==**Suggested Exercise 4.**==
 
+---
 # Matrix Operations
 
 One of the main applications of matrix algebra is the study of **linear systems**. A linear system is a collection of linear equations involving the same unknowns. In general, a system of $n$ equations in $p$ unknowns can be written as
@@ -282,13 +283,15 @@ $$
 (\mathbf{AB})^{-1}=\mathbf{B}^{-1}\mathbf{A}^{-1},\; \mathbf{B}\in\mathbb{R}^{n\times n} \mbox{ of full rank}.
 $$
 
+>[!WARNING] A **singular** matrix has no solution, since its determinant is 0 and can't be a denominator. 
+
 **Suggested Exercise 6.**
 
 ## Diagonal and Trace of a Matrix
 
 The **diagonal** of a square matrix is the collection of entries $a_{11}, a_{22}, \dots, a_{nn}$.
 
-The **trace** of a square matrix is the sum of its diagonal entries:
+>[!NOTE] The **trace** of a square matrix is the sum of its diagonal entries:
 
 $$
 \operatorname{tr}(\mathbf{A}) = \sum_{i=1}^n a_{ii}.
@@ -314,7 +317,7 @@ $$
 \end{bmatrix}
 $$
 
-can be handled blockwise if the dimensions are compatible.
+can be handled block-wise if the dimensions are compatible.
 
 Example:
 
@@ -334,6 +337,8 @@ $$
 \end{bmatrix}.
 $$
 
+> $\mathbf{x}_{1}$ has to have the same dimension as $\mathbf{A}_{11}$!
+
 A special case of a partitioned matrix is the **block-diagonal matrix**,
 which has the following form:
 
@@ -348,6 +353,8 @@ $$
 \right]  ,
 $$
 with $\mathbf{A}_{ii}$ square sub-matrices not necessarily of the same dimensions.
+
+>[!WARNING] A **block-diagonal matrix** is not necessarily diagonal. It can be called a diagonal matrix if and only if the partitions are diagonal themselves.
 
 Determinants, inverses, and transposes can also be defined for partitioned
 matrices, and addition and multiplication can be applied to conformably partitioned
@@ -371,6 +378,7 @@ $$
 Then,
 
 * Addition: 
+	The addends must have the same dimensions.
 $$
 \mathbf{A}+\mathbf{B}=\left[
 \begin{matrix}
@@ -441,10 +449,11 @@ a_{n1}\mathbf{B} & \cdots & a_{nm}\mathbf{B}
 \end{bmatrix},\;\; \mathbf{C}\in\mathbb{R}^{nk\times ml}.
 $$
 
+The dimensions of the matrixes don't have to match, for every index of the resulting matrix we pre-multiply the correct single element of $\mathbf{A}$ for the whole matrix $\mathbf{B}$.
 It is useful for structured covariance matrices and vectorization identities.
 
+---
 # Norms and Distances
-
 
 ## Definition of Norms: 
 
@@ -481,7 +490,7 @@ $$
 \|\mathbf{x}\|_1 = \sum_{i=1}^n |x_i|.
 $$
 
-This is often called the **Manhattan norm**.
+This is often called the ==**Manhattan norm**==.
 
 $\ell_2$ norm:
 
@@ -499,7 +508,7 @@ $$
 
 The $\ell_1$ and $\ell_2$ norms are special cases of the $\ell_p$ norm.
 
-**Maximum norm**:
+**Maximum norm** (or *infinite norm*):
 
 $$
 \|\mathbf{x}\|_\infty = \max_{1 \le i \le n} |x_i|.
@@ -508,7 +517,6 @@ $$
 This norm measures the largest absolute component of the vector.
 
 **Suggested Exercises 8 and 9.**
-
 
 ## Distances
 
@@ -552,8 +560,7 @@ So the length of a vector is a special case of distance.
 
 **Suggested Exercise 10.**
 
-
-
+---
 # Matrix Decompositions
 
 ## Cholesky Decomposition
@@ -562,23 +569,22 @@ For the Cholesky decomposition of a matrix $\mathbf{A} \in \mathbb{R}^{n \times 
 
 - square,
 - symmetric,
-- positive definite.
+- positive definite (this can be checked with $det(\mathbf{A}) > 0$ and $det(\mathbf{A}) \neq 0$).
 
-Recall that a symmetric matrix $\mathbf{A}$ is positive definite if
+==Recall== that a symmetric matrix $\mathbf{A}$ is positive definite if
 
 $$
 \mathbf{x}^\top \mathbf{A} \mathbf{x} > 0 \quad \text{for all } \mathbf{x} \neq \mathbf{0}.
 $$
 
-If $\mathbf{A}$ is symmetric and positive definite, it admits a unique factorization
-
-$$
+>[!NOTE] If $\mathbf{A}$ is symmetric and positive definite, it admits a unique factorization:
+>$$
 \mathbf{A} = \mathbf{L}\mathbf{L}^\top,
 $$
 
-where $\mathbf{L}$ is a lower-triangular matrix with positive diagonal entries. The matrix $\mathbf{L}$ is called the **Cholesky factor**.
+where $\mathbf{L}$ is a **lower-triangular matrix** with positive diagonal entries. The matrix $\mathbf{L}$ is called the **Cholesky factor**.
 
-This factorization can be viewed as a matrix analogue of taking a square root.
+==This factorization can be viewed as a matrix analogue of taking a square root.==
 
 **Suggested Exercise 11.**
 
@@ -608,8 +614,8 @@ $$
 
 The Cholesky decomposition is computationally important because it allows us to:
 
-- solve linear systems efficiently when $\mathbf{A}$ is symmetric positive definite;
-- compute determinants efficiently, since for $\mathbf{A} = \mathbf{L}\mathbf{L}^\top$,
+- solve **linear systems** efficiently when $\mathbf{A}$ is symmetric positive definite;
+- compute **determinants** efficiently, since for $\mathbf{A} = \mathbf{L}\mathbf{L}^\top$,
   $$
   \det(\mathbf{A}) = \det(\mathbf{L})^2
   = \left(\prod_{i=1}^n l_{ii}\right)^2;
@@ -653,15 +659,14 @@ $$
 
 This equation says that applying the linear map represented by $\mathbf{A}$ to the vector $\mathbf{p}$ changes only its scale, not its direction.
 
-A matrix $\mathbf{A}$ is called **diagonalizable** if there exists an invertible matrix $\mathbf{P}$ such that
-
-$$
+>[!NOTE] A matrix $\mathbf{A}$ is called **diagonalizable** if there exists an invertible matrix $\mathbf{P}$ such that
+>$$
 \mathbf{\Lambda} = \mathbf{P}^{-1}\mathbf{A}\mathbf{P},
 $$
-
+ 
 where $\mathbf{\Lambda}$ is diagonal. 
 
-If the columns of $\mathbf{P}$ are eigenvectors of $\mathbf{A}$ and the diagonal entries of $\mathbf{\Lambda}$ are the corresponding eigenvalues, then this factorization is the **eigendecomposition** of $\mathbf{A}$. 
+>[!info] If the columns of $\mathbf{P}$ are eigenvectors of $\mathbf{A}$ and the diagonal entries of $\mathbf{\Lambda}$ are the corresponding eigenvalues, then this factorization is the **eigendecomposition** of $\mathbf{A}$. 
 
 For a real symmetric matrix, the eigenvectors can be chosen to be orthonormal, so $\mathbf{P}$ is **orthogonal**, i.e.
 
