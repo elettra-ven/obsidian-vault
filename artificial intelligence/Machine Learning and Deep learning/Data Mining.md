@@ -137,3 +137,30 @@ To allow the different parts to work together they have to speak a **common tong
 	Put it to use, and keep it working.
 
 The third step, **Data Preparation**, is the most expensive and consuming phase of the cycle. It should take up to $60-80\%$ of project time.
+
+## Business Data
+OLTPs are designed for relatively small transactions and perform well on normalized schemas or *current-state-only systems*, where history is not important.
+For these reasons this kind of data isn't enough for bigger operational systems. 
+It needs to be stored somewhere else:
+
+## Data Warehouse
++ **Subject oriented**
++ **Integrated**
++ **Time variant**
++ **Non-volatile**
+
+To extract data from OLTPs and move it to DWs we need **ETL** (Extract, Transform, Load) **operations**.
+
+![[Pasted image 20260917164132.png|598]]
+
+DWs are structured and store pre-modelled data. They are also defined as "**schema-on-write**", since the schema design must be defined before the data arrives.
+
+A common type of schema structure for DWs is "**star-schema**":
+![[Pasted image 20260917164652.png|362]]
+## Data Lake
+Also defined as "**schema-on-read**", are made for the storage of raw, unstructured data, kept as-is.
+DLs are useful for logs, texts, images, streams ...
+
+>[!important] So far
+>![[Pasted image 20260917164806.png]]
+

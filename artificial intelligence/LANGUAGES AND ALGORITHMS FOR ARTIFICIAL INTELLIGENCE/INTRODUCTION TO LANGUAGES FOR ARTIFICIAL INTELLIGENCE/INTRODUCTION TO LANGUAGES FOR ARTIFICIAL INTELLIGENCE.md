@@ -37,7 +37,8 @@ There is no direct connection between Python data and machine representation (it
 	and the **name** of the type itself.
 
 $$x \rightarrow obj \rightarrow (val, type, id)$$
-"x" is a name bound to an object, which has a value, a type, and an ID. This relation is called "state" of an object.
+"x" is a name bound to an [[Objects in Python|object]], which has a value, a type, and an ID. This relation is called "state" of an object.
+
 The object is the binding element between the value and its type.
 
 >[!info] Some types can be "**Truthy**" and "**Falsy**":
@@ -56,6 +57,19 @@ y = 2
 ```
 For this reason, x and y have still the same ID.
 We can't change the value of an object with an immutable type. Instead, we have to use another object with the desired value associated.
+
+Another example:
+```
+T = (1,2,3)
+T = T + (4,5)
+```
+These operations create new objects, while...
+```
+V = (100,200)
+S = V
+```
+...`S` and `V` are two names for the same object.
+
 
 > [!NOTE] Garbage Collector
 > It keeps track of the execution and removes from the memory every element that is not referenced.
@@ -144,4 +158,64 @@ print(foo(10)) # prints 20
 print(fie(10)) # prints 210 
 print(A) # prints 10
 ```
+
+See the documentation of predefined functions: 
+https://docs.python.org/3/library/functions.html
+Catalogue of libraries:
+https://docs.python.org/3/library/
+
+When we `import` a library we bring into the global frame a set of **fully qualified names** bound to specific objects.
+
+---
+## Loops
+
+```
+for <name> in <sequence>:
+	<block>
+```
+
+It's a bounded iteration that express a repetition.
+
+1. `<sequence>` is computed and "**frozen**".
+2. If `<name>` does not exists, it is created.
+3. `<name>` is bound to the first element of the `<sequence>`
+4. Evaluate `<block>` and, if it exists, repeat the process from point 3 with the next element in the `<sequence>`.
+
+In point 1. the identity of object `<sequence>` itself is frozen.
+Reassignments of the name of the `<sequence>` can happen, but the frozen iterabile object remains itself throughout the whole loop.
+
+For example:
+```
+s = 'lodi' 
+for c in s: 
+	s = 'Michael' 
+	print(c) 
+print(s)
+```
+Prints: 
+```
+l
+o
+d
+i
+Michael
+```
+
+### Tuples
+It's an immutable sequence of objects, that groups different values, each of them of arbitrary type.
+`for` can also be used to **scan** a tuple or a sequence index by index.
+
+The function `tuple()` can be used to convert values into tuples:
+```
+tuple((1,2,3))  ->  (1,2,3)
+```
+
+>[!important] Reverse function
+>```
+>def rev(S):
+>	newS = ''
+>	for el in S:
+>		newS = el + newS
+>	return newS
+>```
 
