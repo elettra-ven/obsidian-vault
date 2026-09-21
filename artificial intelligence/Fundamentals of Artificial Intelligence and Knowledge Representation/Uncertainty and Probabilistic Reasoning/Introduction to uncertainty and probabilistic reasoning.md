@@ -79,15 +79,22 @@ A random variable is a function
 $$X : \Omega \rightarrow \chi$$ 
 which associates each possible world with a value in its range $\chi$ (e.g., the reals or Booleans).
 
-The probability measure $P$ induces a probability distribution for every random variable $X$.
 The probability distribution of $X$ assigns a probability to every variable $x_i \in \chi$:
 $$P_x(x_i) = P(X=x_i)$$
+Therefore, the probability measure $P$ induces a probability distribution for every random variable $X$.
 
+Random variables can also be used to define **events**:
+>[!tip] An **event** is specified by stating which value, or values, a random variable may take.
 ### Propositions
-A proposition denotes the event consisting of all possible worlds in which it is true.
+
+>[!tip] A **proposition** denotes the event consisting of all possible worlds in which it is true.
 
 Let *a* be a proposition. Its probability is the  probability of each atomic event where *a* is true.
 Therefore, a proposition is a disjunction of mutually exclusive atomic events:
+
+![[Pasted image 20260921180612.png]]
+
+For example:
 $$a \vee b ≡ (a \wedge b) \vee (a \wedge \neg b) \vee (\neg a \wedge b) $$$$P(a \vee b) = P(a \wedge b) + P(a \wedge \neg b) + P(\neg a \wedge b)$$
 
 #### Syntax for propositions
@@ -103,18 +110,64 @@ $$a \vee b ≡ (a \wedge b) \vee (a \wedge \neg b) \vee (\neg a \wedge b) $$$$P(
 * **Arbitrary** Boolean combinations of basic propositions
 
 ### Probability densities
-A probability density function describes how probability is locally distributed over the possible values of the variable.
-The number that would be assigned to a single "point" is now assigned to a "region" (density).
+A probability density function (**pdf**) describes how probability is locally distributed over the possible values of the variable.
+The value that would be assigned to a single "point" is now assigned to a "region" (density).
 
+>[!info] Example:
+>A dart lands uniformly at random on a circular dartboard of radius 10 cm.
+>Let $L$ denote the location where the dart lands. The dartboard is a continuous space: 
+>there are infinitely many possible landing locations. The centre is a single point with no area, so: $$P(L=\text{centre})=0$$
+>An exact point is too small to have positive probability in a continuous space.
+
+For a continuous random variable, probabilities concern regions of possible values, rather than exact individual values.
+
+>[!important] Probability density function (pdf)
+>Let $X$ be a continuous random variable with values in $\chi$. 
+>A nonnegative integrable function: $$p_X : \chi \rightarrow \mathbb{R}_{\geq 0}$$ 
+>	Is a **pdf** for $X$ if: $$\int_{\chi} p_X(X)\ \mathrm{d}x = 1$$
+
+Therefore, the probability that $X$ falls in an interval $[a,b]$ is the area under its density curve, $\int_{a}^{b}p_X(X)\mathrm{d}x$.
 ### Distributions:
 - #### Uniform
-- #### Gaussian
+	![[Pasted image 20260921203640.png|301]]
+	$$p_X(x) = \begin{cases} \frac{1}{b - a} & \text{if } a \le x \le b, \\ 0 & \text{otherwise.} \end{cases}$$
+- #### Gaussian (Normal)
+	![[Pasted image 20260921204325.png|305]]
+	If:
+	$$X \sim \mathcal{N}(\mu, \sigma^2)$$
+	Then its pdf is:
+	$$p_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$
+	- $\mu$ is the **mean** (0 in standard Gaussian)
+	- $\sigma$ is ste SD (1 in standard Gaussian)
 
 >[!definition] Prior probability
 >The prior or unconditional probability of a proposition expresses an agent’s belief before incorporating new evidence.
 
 - #### Joint probability distribution
-	It assigns a probability to every complete assignment of values to those variables.
+	The joint probability distribution over a set of random variables assigns a probability to every complete assignment of values to those variables.
+	$$\begin{aligned} P(\text{Weather} = \text{sunny}) &= P(\text{Weather} = \text{sunny} \land \text{Cavity} = \text{true}) \\ &\quad + P(\text{Weather} = \text{sunny} \land \text{Cavity} = \text{false}) \\ &= 0.144 + 0.576 = 0.72 \end{aligned}$$
 
 ## Conditional Probability
-(NOT causal)
+$$P(X \ | \ \text{Evidence} = e)$$
+It represents an agent's belief about X given $\text{Evidence} = e$.
+It is **not a logical or causal rule**.
+
+For two propositions $a$ and $b$, with $P(b)\neq0$:
+$$P(a \mid b) = \frac{P(a \land b)}{P(b)}$$
+Product rule:
+$$P(a \land b) = P(a \mid b) P(b) = P(b \mid a) P(a)$$
+
+By applying the product rule to every combination of values of two random variables, we can construct their **joint probability distribution**.
+
+>[!note] General Product Rule
+>$$\begin{aligned}
+P(X_1, \dots, X_n) &= P(X_1, \dots, X_{n-1}) P(X_n \mid X_1, \dots, X_{n-1}) \\
+&= P(X_1, \dots, X_{n-2}) P(X_{n-1} \mid X_1, \dots, X_{n-2}) P(X_n \mid X_1, \dots, X_{n-1}) \\
+&= \dots \\
+&= \prod_{i=1}^{n} P(X_i \mid X_1, \dots, X_{i-1})
+\end{aligned}$$
+
+# Inference using **full joint distributions**
+If we know a complete joint probability distribution, we can answer any probability query by **summing** the entries corresponding to the possible worlds in which the query is true.
+For any proposition $\phi$, we sum the events in which $\phi$ is true:
+$$P(\phi) = \sum_{\omega : \omega \models \phi} P(\omega)$$

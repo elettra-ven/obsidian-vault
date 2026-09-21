@@ -37,11 +37,17 @@ For this purpose, we temporally change the goal to *decide if, **given some form
 
 This syntactic procedure is able to deduce the formulas from a formal problem (resolution). 
 ### Reasoning
-...
+It's a method that deals with symbols in order to decide if a specific formula-goal $G$ is valid.
+
+>[!warning] Some definitions:
+>- $x\models y$ : $y$ is a **logic consequence** of $x$.
+>- $x\vdash^{E} y$ : $y$ can be **deduced** by $x$ using the reasoning $E$.
 
 $$KB \text{ (Knowledge Based)} \vdash G \rightarrow \text{ soundness/correctness }\rightarrow KB \text{ (Knowledge Based)} \models G$$
 
 $$KB \text{ (Knowledge Based)} \models G \rightarrow \text{ completeness }\rightarrow KB \text{ (Knowledge Based)} \vdash G$$
+
+There are different methods of reasoning:
 
 >[!important] Theorem of Reasoning by Deduction
 >Given a set of formulas  $\{F_1, ... , F_n\}$ and a formula $G$,
@@ -49,16 +55,19 @@ $$KB \text{ (Knowledge Based)} \models G \rightarrow \text{ completeness }\right
 
 We can prove the logical consequence of G by proving the validity of $(F_1 \wedge ... \wedge F_n) \rightarrow G$.
 
+
 >[!important] Theorem of Reasoning by Refutations
 >Given a set of formulas  $\{F_1, ... , F_n\}$ and a formula $G$, 
->$F_1 \wedge ... \wedge F_n \models G$ if and only if $F_1 \wedge ... \wedge F_n \wedge \neg G$
+>$F_1 \wedge ... \wedge F_n \models G$ if and only if $F_1 \wedge ... \wedge F_n \wedge \neg G$ is **inconsistent**.
 
 We can prove the logical consequence of G by proving the inconsistency of $F_1 \wedge ... \wedge F_n \wedge \neg G$.
 
 ### Resolution rule
-It applies to logic formulas expressed in the form of clauses.
-A clause is a disjunction of literals. We consider a set of clauses in **Conjunctive Normal Form** (CNF): way of writing a logical formula as an **AND** of **ORs**
-$$(p \vee \neg q \vee r) \wedge (\neg p \vee s)\wedge(q \vee \neg r \vee \neg s)$$
+Together with the **refutation** mechanism can be used for *reasoning*.
+
+It applies to logic formulas expressed in the form of clauses. 
+A clause is a disjunction of literals. 
+We consider a set of clauses in **Conjunctive Normal Form** (CNF): way of writing a logical formula as an **AND** of **ORs**.
 
 Example of **resolution**:
 ![[Pasted image 20260921115343.png|517]]
@@ -101,7 +110,7 @@ $$𝐾𝐵 = \{(a \rightarrow c \vee d) \wedge (a \vee d \vee e) \wedge (a \righ
 	10. (2 + 5)
 	11. (1 + 3)
 	
-	12. (10+11)
+	12. (10+11) $:\rightarrow d$
 	
 	13. (4+12): **empty clause** (contradiction)
 
@@ -112,6 +121,8 @@ The original formula G is logical consequence of the KB.
 >[!note] Horn Clauses
 >They have at most one positive literal.
 
+A **literal** is an atom or its negation.
+
 Horn Clauses are equivalent to $A \leftarrow B_1, ..., B_n$.
 
 # FOL (First Order Logic)
@@ -121,5 +132,14 @@ Horn Clauses are equivalent to $A \leftarrow B_1, ..., B_n$.
 - A variable; 
 - If $f$ is a $n$-ary function symbol, and $t_1, ...,t_n$ are terms, then $f(t_1, ...,t_n)$ is also a term.
 
+The **terms** are used as symbols to indicate objects of the problem.
+
+>[!info] An **atom**/atomic formula is defined as the application of a $n$-ary predicate symbol $p$ to $n$ terms.
+>$$p(t_1,...,t_n)$$
+
 ## WFF (Well Formed Formulas)
+They are **recursively** defined as:
+1. Every atom is a WFF
+2. If $\phi$ and $\psi$ are WFF, their **logical connections** are also WFF.
+3. If $\phi$ is a WFF, given a variable X, $\exists X \, \phi$ and $\forall X \, \phi$ are also WFF
 
