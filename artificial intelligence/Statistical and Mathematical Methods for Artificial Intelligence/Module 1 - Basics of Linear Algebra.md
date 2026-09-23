@@ -34,22 +34,24 @@ Throughout this module, we use the following conventions:
 
 ## Definition
 
-An $n \times m$ matrix $\mathbf{A}$ is a rectangular array with $n$ rows and $m$ columns:
-
-$$
+>[!info] Matrix
+>An $n \times m$ matrix $\mathbf{A}$ is a rectangular array with $n$ rows and $m$ columns:
+>
+>$$
 \mathbf{A} = [a_{ij}] =
 \begin{bmatrix}
 a_{11} & \cdots & a_{1m} \\
 \vdots & \ddots & \vdots \\
 a_{n1} & \cdots & a_{nm}
 \end{bmatrix}.
-$$
-
-The entry in row $i$ and column $j$ is denoted $a_{ij}$.
+>$$
+>
+>The entry in row $i$ and column $j$ is denoted $a_{ij}$.
 
 ## Addition and Subtraction
 
-Two matrices can be added only if they have the same dimensions. If $\mathbf{A}=[a_{ij}]$ and $\mathbf{B}=[b_{ij}]$ are conformable for addition, i.e. $\mathbf{A}, \mathbf{B} \in \mathbb{R}^{m \times n}$, then
+Two matrices can be added only if they have the same dimensions. 
+If $\mathbf{A}=[a_{ij}]$ and $\mathbf{B}=[b_{ij}]$ are conformable for addition, i.e. $\mathbf{A}, \mathbf{B} \in \mathbb{R}^{m \times n}$, then
 
 $$
 \mathbf{A} + \mathbf{B} = [a_{ij}+b_{ij}].
@@ -63,11 +65,11 @@ Properties:
 
 ## Transposition
 
-The transpose of an $n \times m$ matrix $\mathbf{A}$ is the $m \times n$ matrix obtained by swapping rows and columns:
-
-$$
+>[!info] $\mathbf{A}^\top$
+>The transpose of an $n \times m$ matrix $\mathbf{A}$ is the $m \times n$ matrix obtained by swapping rows and columns:
+>$$
 \mathbf{A}^\top = [a_{ji}].
-$$
+>$$
 
 
 
@@ -85,12 +87,11 @@ and with $\mathbf{C}\in \mathbb{R}^{m \times n}$
 $$
 (\mathbf{AC})^\top = \mathbf{C}^\top \mathbf{A}^\top.
 $$
-
 **Suggested Exercises 1 and 2.**
 
 ## Multiplication
 
-Let $\mathbf{A}$ be an $n \times m$ matrix and $\mathbf{B}$ an $m \times k$ matrix. Then the product $\mathbf{C}=\mathbf{AB}$ is an $n \times k$ matrix with entries
+Let $\mathbf{A}$ be an $n \times m$ matrix and $\mathbf{B}$ an $m \times k$ matrix. Then the product $\mathbf{C}=\mathbf{AB}$ is an $n \times k$ (number of rows of the first matrix and number of columns of the second) matrix with entries
 
 $$
 c_{ij} = \sum_{\ell=1}^m a_{i\ell}b_{\ell j}.
@@ -132,18 +133,16 @@ $$
 \end{bmatrix}.
 $$
 
-For a square matrix $\mathbf{A}\in\mathbb{R}^{n\times n}$, it satisfies
-
-$$
+>[!important] Identity Matrix
+>For a square matrix $\mathbf{A}\in\mathbb{R}^{n\times n}$, it satisfies
+>$$
 \mathbf{AI}_n = \mathbf{I}_n\mathbf{A} = \mathbf{A}
-$$
-
-More generally, if $\mathbf{A}\in\mathbb{R}^{n\times m}$, then
-
-$$
+>$$
+>More generally, if $\mathbf{A}\in\mathbb{R}^{n\times m}$, then
+>$$
 \mathbf{A}\mathbf{I}_m=\mathbf{I}_n\mathbf{A}=\mathbf{A}.
-$$
-The order of the multiplication matters.
+>$$
+>The order of the multiplication matters.
 
 ## Some Special Types of Matrices
 
@@ -166,7 +165,7 @@ $$
 
 ## Rank of a Matrix
 
->[!NOTE] The rank of a matrix, denoted $\operatorname{rank}(\mathbf{A})$, is the number of linearly independent columns of $\mathbf{A}$. Equivalently, it is also the number of linearly independent rows.
+>[!NOTE] The rank of a matrix, denoted $\operatorname{rank}(\mathbf{A})$, is the **number of linearly independent columns** of $\mathbf{A}$. Equivalently, it is also the number of linearly independent rows.
 
 Important facts:
 
@@ -212,7 +211,8 @@ Key properties:
 ---
 # Matrix Operations
 
-One of the main applications of matrix algebra is the study of **linear systems**. A linear system is a collection of linear equations involving the same unknowns. In general, a system of $n$ equations in $p$ unknowns can be written as
+One of the main applications of matrix algebra is the study of **linear systems**. 
+A linear system is a collection of linear equations involving the same unknowns. In general, a system of $n$ equations in $p$ unknowns can be written as
 
 $$
 \begin{cases}
@@ -228,7 +228,8 @@ $$
 \mathbf{A}\mathbf{x}=\mathbf{b},
 $$
 
-where $\mathbf{A}\in\mathbb{R}^{n\times p}$ is the **coefficient matrix**, $\mathbf{x}\in\mathbb{R}^p$ is the vector of unknowns, and $\mathbf{b}\in\mathbb{R}^n$ is the right-hand-side vector. Each row of $\mathbf{A}$ represents one equation, and each column contains the coefficients associated with one unknown.
+where $\mathbf{A}\in\mathbb{R}^{n\times p}$ is the **coefficient matrix**, $\mathbf{x}\in\mathbb{R}^p$ is the vector of unknowns, and $\mathbf{b}\in\mathbb{R}^n$ is the right-hand-side vector. 
+Each row of $\mathbf{A}$ represents one equation, and each column contains the coefficients associated with one unknown.
 
 Solving the system means finding all vectors $\mathbf{x}$ that satisfy every equation simultaneously. Depending on $\mathbf{A}$ and $\mathbf{b}$, a linear system may have no solution, exactly one solution, or infinitely many solutions. Matrix operations such as inversion, rank computation, and matrix decomposition help us determine which case occurs and, when solutions exist, compute them efficiently.
 
@@ -242,17 +243,7 @@ $$
 \mathbf{A}^{-1}\mathbf{A}=\mathbf{A}\mathbf{A}^{-1}=\mathbf{I}_n.
 $$
 
-If the inverse exists, the linear system
-
-$$
-\mathbf{A}\mathbf{x}=\mathbf{b}
-$$
-
-has solution
-
-$$
-\mathbf{x}=\mathbf{A}^{-1}\mathbf{b}.
-$$
+If the inverse exists, the linear system $\mathbf{A}\mathbf{x}=\mathbf{b}$ has solution $\mathbf{x}=\mathbf{A}^{-1}\mathbf{b}.$
 
 For a $2 \times 2$ matrix,
 
@@ -266,15 +257,16 @@ $$
 
 its inverse is
 
-$$
+>[!important]
+>$$
 \mathbf{A}^{-1} = \frac{1}{a_{11}a_{22}-a_{12}a_{21}}
 \begin{bmatrix}
 a_{22} & -a_{12} \\
 -a_{21} & a_{11}
 \end{bmatrix},
-$$
+>$$
 
-provided $a_{11}a_{22}-a_{12}a_{21} \neq 0$.
+provided the determinant $a_{11}a_{22}-a_{12}a_{21} \neq 0$.
 
 Useful identities:
 
@@ -307,7 +299,8 @@ Basic properties with $\mathbf{A},\,\mathbf{B}\in\mathbb{R}^{n\times n}$:
 
 ## Partitioned Matrices
 
-Many matrix calculations are easier when we partition a matrix into blocks. For instance,
+Many matrix calculations are easier when we partition a matrix into blocks. 
+For instance,
 
 $$
 \mathbf{A} =
@@ -358,8 +351,8 @@ with $\mathbf{A}_{ii}$ square sub-matrices not necessarily of the same dimension
 
 Determinants, inverses, and transposes can also be defined for partitioned
 matrices, and addition and multiplication can be applied to conformably partitioned
-matrices. Let $\mathbf{A}$ and $\mathbf{B}$ be two conformably partitioned
-matrices with:
+matrices. 
+Let $\mathbf{A}$ and $\mathbf{B}$ be two conformably partitioned matrices with:
 
 $$
 \mathbf{A}=\left[
@@ -398,7 +391,7 @@ $$
 \right]  
 $$
 
-* Determinant, provided the required inverse exists:
+* **Determinant**, provided the required inverse exists:
 $$
 \left\vert \mathbf{A}\right\vert =\left\vert
 \begin{matrix}
@@ -408,7 +401,7 @@ $$
 \right\vert =\left\vert \mathbf{A}_{11}\right\vert \left\vert \mathbf{A}_{22}-\mathbf{A}_{21}\mathbf{A}_{11}^{-1}\mathbf{A}_{12}\right\vert =\left\vert \mathbf{A}_{22}\right\vert \left\vert \mathbf{A}_{11}-\mathbf{A}_{12}\mathbf{A}_{22}^{-1}\mathbf{A}_{21}\right\vert.
 $$
 
-If $\mathbf{A}$ is a block-diagonal matrix:
+	If $\mathbf{A}$ is a block-diagonal matrix:
 $$
 \left\vert \mathbf{A}\right\vert
 =\left\vert
@@ -498,7 +491,7 @@ $$
 \|\mathbf{x}\|_2 = \sqrt{\sum_{i=1}^n x_i^2}.
 $$
 
-This is the **Euclidean norm**.
+This is the ==**Euclidean norm**==.
 
 $\ell_p$ norm: For $p \ge 1$,
 
@@ -508,7 +501,7 @@ $$
 
 The $\ell_1$ and $\ell_2$ norms are special cases of the $\ell_p$ norm.
 
-**Maximum norm** (or *infinite norm*):
+==**Maximum norm**== (or *infinite norm*):
 
 $$
 \|\mathbf{x}\|_\infty = \max_{1 \le i \le n} |x_i|.
@@ -526,7 +519,8 @@ $$
 d(\mathbf{x},\mathbf{y}) = \|\mathbf{x}-\mathbf{y}\|.
 $$
 
-The definition works for any norm. Different norms lead to different distance measures. Because norms satisfy the three norm axioms, the induced distance has the expected properties:
+The definition works for any norm. Different norms lead to different distance measures. 
+Because norms satisfy the three norm axioms, the induced distance has the expected properties:
 
 1. **Non-negativity**
    $$
@@ -662,9 +656,8 @@ This equation says that applying the linear map represented by $\mathbf{A}$ to t
 >[!NOTE] A matrix $\mathbf{A}$ is called **diagonalizable** if there exists an invertible matrix $\mathbf{P}$ such that
 >$$
 \mathbf{\Lambda} = \mathbf{P}^{-1}\mathbf{A}\mathbf{P},
-$$
- 
-where $\mathbf{\Lambda}$ is diagonal. 
+>$$
+> where $\mathbf{\Lambda}$ is diagonal. 
 
 >[!info] If the columns of $\mathbf{P}$ are eigenvectors of $\mathbf{A}$ and the diagonal entries of $\mathbf{\Lambda}$ are the corresponding eigenvalues, then this factorization is the **eigendecomposition** of $\mathbf{A}$. 
 
@@ -689,6 +682,7 @@ $$
 
 **Suggested Exercise 14.**
 
+---
 ### How to Compute Eigenvalues and Eigenvectors
 
 For hand calculations, the standard procedure is based on the **eigenvalue equation**
@@ -703,7 +697,8 @@ $$
 (\mathbf{A} - \lambda \mathbf{I})\mathbf{x} = \mathbf{0}.
 $$
 
-This reformulation shows that, for a given scalar $\lambda$, an eigenvector is simply a nonzero solution of a **homogeneous linear system** with coefficient matrix $\mathbf{A}-\lambda \mathbf{I}$. 
+>[!important] Eigenvector
+This ($\uparrow \uparrow \uparrow$) reformulation shows that, for a given scalar $\lambda$, an **eigenvector** is simply a nonzero solution of a **homogeneous linear system** with coefficient matrix $\mathbf{A}-\lambda \mathbf{I}$. 
 
 To obtain an eigenvector, the homogeneous system
 
@@ -711,22 +706,21 @@ $$
 (\mathbf{A}-\lambda \mathbf{I})\mathbf{x} = \mathbf{0}
 $$
 
-must have a nontrivial solution. A homogeneous linear system has a nontrivial solution precisely when its coefficient matrix is **not invertible**. Therefore we require
+must have a **nontrivial solution**: 
 
-$$
+>[!info] Nontrivial solution
+>A homogeneous linear system has a nontrivial solution precisely when its coefficient matrix is **not invertible**. 
+>Therefore we require
+>$$
 \det(\mathbf{A}-\lambda \mathbf{I}) = 0.
-$$
-
-Hence, the roots of 
-
-$$
+>$$
+>Hence, the roots of 
+>$$
 \det(\mathbf{A}-\lambda \mathbf{I})
-$$
-
-are the eigenvalues of $\mathbf{A}$.
+>$$
+>are the eigenvalues of $\mathbf{A}$.
 
 So the general hand-computation procedure is:
-
 1. form $\mathbf{A}-\lambda \mathbf{I}$;
 2. compute $\det(\mathbf{A}-\lambda \mathbf{I})$;
 3. solve the polynomial equation $\det(\mathbf{A}-\lambda \mathbf{I}) = 0$.
@@ -741,10 +735,9 @@ and solve the resulting homogeneous system. Any nonzero solution is an eigenvect
 
 **Suggested Exercise 15.**
 
-
 ### Additional Properties
 
-In the case of a diagonal matrix, say
+In the case of a **diagonal matrix**, say
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -776,7 +769,7 @@ with
 $$
 \mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k,\dots,\lambda_n^k).
 $$
-Every real symmetric matrix can be diagonalized with an orthogonal matrix $\mathbf{P}$ such that $\mathbf{P}^\top\mathbf{P}=\mathbf{I}$. From $\mathbf{A} = \mathbf{P}\mathbf{\Lambda}\mathbf{P}^{-1}$ and $\mathbf{P}^{-1}=\mathbf{P}^\top$, we obtain
+Every real **symmetric** matrix can be diagonalized with an orthogonal matrix $\mathbf{P}$ such that $\mathbf{P}^\top\mathbf{P}=\mathbf{I}$. From $\mathbf{A} = \mathbf{P}\mathbf{\Lambda}\mathbf{P}^{-1}$ and $\mathbf{P}^{-1}=\mathbf{P}^\top$, we obtain
 
 $$
 \mathbf{\Lambda} = \mathbf{P}^\top \mathbf{A}\mathbf{P}.

@@ -121,7 +121,7 @@ To allow the different parts to work together they have to speak a **common tong
 
 + ### CRISP-DM cycle
 	It focuses on **data-driven decisions**.
-![[Pasted image 20260917154747.png|324]]
+![[Pasted image 20260917154747.png|420]]
 
 1. **Business Understanding** 
 	What problem are we actually solving.
@@ -157,6 +157,8 @@ DWs are structured and store pre-modelled data. They are also defined as "**sche
 
 A common type of schema structure for DWs is "**star-schema**":
 ![[Pasted image 20260917164652.png|362]]
+
+[[Data Warehouses|In-depth analysis of Data Warehouses.]]
 ## Data Lake
 Also defined as "**schema-on-read**", are made for the storage of raw, unstructured data, kept as-is.
 DLs are useful for logs, texts, images, streams ...

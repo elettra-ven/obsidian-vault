@@ -27,3 +27,7 @@ The process must begin from a business question, like:
 - Which transactions look fraudulent?
 These tasks can be traced back to [[Classification]], [[Regression]], [[Clustering]], Association rules, etc ...
 
+## Questions on the subject of **Data Mining**, related to *NordicMart*
+
+>If the question starts from the **business understanding**, it touches all of the "boxes" of the CRISP-DM methodology.
+

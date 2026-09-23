@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"ced8b85a25ef66d1","type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md","x":-440,"y":-120,"width":400,"height":400,"color":"1"},
+		{"id":"1dfdfab8f3da9537","type":"file","file":"artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md","x":220,"y":-120,"width":400,"height":400,"color":"4"},
+		{"id":"c465143b87f5bb57","type":"file","file":"artificial intelligence/Machine Learning.md","x":880,"y":-120,"width":400,"height":400}
+	],
+	"edges":[]
+}

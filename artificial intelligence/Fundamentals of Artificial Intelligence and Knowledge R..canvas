@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"36de697137d1b5e0","type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/First Order Logic.md","x":-1240,"y":-260,"width":400,"height":400,"color":"5"},
+		{"id":"bca19bfd80ca7c12","type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Introduction to uncertainty and probabilistic reasoning.md","x":-720,"y":-260,"width":400,"height":400,"color":"6"},
+		{"id":"997da8593e11b91b","type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md","x":-160,"y":-720,"width":400,"height":400},
+		{"id":"1140fc61f34c4bf7","type":"text","text":"Module 1","x":-160,"y":-820,"width":120,"height":60},
+		{"id":"4cd4745522e3b912","type":"text","text":"Module 3","x":-720,"y":-350,"width":120,"height":60},
+		{"id":"b2707a4d5c5f901e","type":"text","text":"Module 2","x":-1240,"y":-350,"width":120,"height":60}
+	],
+	"edges":[
+		{"id":"f3881ae4970595b1","fromNode":"997da8593e11b91b","fromSide":"left","toNode":"bca19bfd80ca7c12","toSide":"top"},
+		{"id":"771ae402db3f439b","fromNode":"997da8593e11b91b","fromSide":"left","toNode":"36de697137d1b5e0","toSide":"top"}
+	]
+}
