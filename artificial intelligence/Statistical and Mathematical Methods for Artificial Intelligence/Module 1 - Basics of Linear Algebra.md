@@ -151,12 +151,12 @@ $$
 - **Vector of ones** $\mathbf{1}_n$: all entries equal 1.
 - **Square matrix**: same number of rows and columns, i.e. $\mathbf{A}\in\mathbb{R}^{n\times n}$.
 - **Symmetric square matrix**: $\mathbf{A}=\mathbf{A}^\top$.
-- **Orthogonal square matrix**: $\mathbf{A}^\top\mathbf{A}=\mathbf{A}\mathbf{A}^\top=\mathbf{I}$. The columns and rows of $\mathbf{A}$ are orthonormal vectors.
+- **orthonormal square matrix**: $\mathbf{A}^\top\mathbf{A}=\mathbf{A}\mathbf{A}^\top=\mathbf{I}$. The columns and rows of $\mathbf{A}$ are orthonormal vectors.
 - A nonsquare matrix $\mathbf{A}\in\mathbb{R}^{n\times m}$ with $m<n$ has $m$ orthonormal columns if $\mathbf{A}^\top\mathbf{A}=\mathbf{I}_m$. In that case, $\mathbf{A}\mathbf{A}^\top\neq\mathbf{I}_n$.
 - **Diagonal matrix**: only diagonal entries may be nonzero.
 - **Triangular matrix**: all entries above or below the diagonal are zero.
 - **Idempotent square matrix**: $\mathbf{A}^2=\mathbf{A}\mathbf{A}=\mathbf{A}$.
-- **Orthogonal square projector**: $\mathbf{A}^2=\mathbf{A}\mathbf{A}=\mathbf{A}$ and $\mathbf{A}=\mathbf{A}^\top$.
+- **orthonormal square projector**: $\mathbf{A}^2=\mathbf{A}\mathbf{A}=\mathbf{A}$ and $\mathbf{A}=\mathbf{A}^\top$.
 - A symmetric matrix $\mathbf{A}$ is **positive definite** if 
 $$
 \mathbf{x}^\top \mathbf{A} \mathbf{x} > 0 \quad \text{for all } \mathbf{x} \neq \mathbf{0}.
@@ -661,7 +661,7 @@ This equation says that applying the linear map represented by $\mathbf{A}$ to t
 
 >[!info] If the columns of $\mathbf{P}$ are eigenvectors of $\mathbf{A}$ and the diagonal entries of $\mathbf{\Lambda}$ are the corresponding eigenvalues, then this factorization is the **eigendecomposition** of $\mathbf{A}$. 
 
-For a real symmetric matrix, the eigenvectors can be chosen to be orthonormal, so $\mathbf{P}$ is **orthogonal**, i.e.
+For a real symmetric matrix, the eigenvectors can be chosen to be orthonormal, so $\mathbf{P}$ is **orthonormal**, i.e.
 
 $$
 \mathbf{P}^\top\mathbf{P}=\mathbf{I}_n.
@@ -769,7 +769,7 @@ with
 $$
 \mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k,\dots,\lambda_n^k).
 $$
-Every real **symmetric** matrix can be diagonalized with an orthogonal matrix $\mathbf{P}$ such that $\mathbf{P}^\top\mathbf{P}=\mathbf{I}$. From $\mathbf{A} = \mathbf{P}\mathbf{\Lambda}\mathbf{P}^{-1}$ and $\mathbf{P}^{-1}=\mathbf{P}^\top$, we obtain
+Every real **symmetric** matrix can be diagonalized with an orthonormal matrix $\mathbf{P}$ such that $\mathbf{P}^\top\mathbf{P}=\mathbf{I}$. From $\mathbf{A} = \mathbf{P}\mathbf{\Lambda}\mathbf{P}^{-1}$ and $\mathbf{P}^{-1}=\mathbf{P}^\top$, we obtain
 
 $$
 \mathbf{\Lambda} = \mathbf{P}^\top \mathbf{A}\mathbf{P}.
@@ -794,8 +794,8 @@ $$
 
 where:
 
-- $\mathbf{U} \in \mathbb{R}^{m \times m}$ is an orthogonal matrix,
-- $\mathbf{V} \in \mathbb{R}^{n \times n}$ is an orthogonal matrix,
+- $\mathbf{U} \in \mathbb{R}^{m \times m}$ is an orthonormal matrix,
+- $\mathbf{V} \in \mathbb{R}^{n \times n}$ is an orthonormal matrix,
 - $\mathbf{\Sigma} \in \mathbb{R}^{m \times n}$ is diagonal in the rectangular sense, with nonnegative entries on the diagonal.
 
 The diagonal entries of $\mathbf{\Sigma}$ are the **singular values** of $\mathbf{A}$:

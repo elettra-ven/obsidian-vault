@@ -30,4 +30,10 @@ These tasks can be traced back to [[Classification]], [[Regression]], [[Clusteri
 ## Questions on the subject of **Data Mining**, related to *NordicMart*
 
 >If the question starts from the **business understanding**, it touches all of the "boxes" of the CRISP-DM methodology.
+### Customer segmentation
 
+![[Pasted image 20260923105457.png]]
+
+The three measures in the table can be used for a **clustering task** of segmentation (customers are divided into groups/segments according to their preference/data).
+
+*Recency*, *Frequency* and *Monetary* are the results of roll-ups off the *Sales* facts-table.

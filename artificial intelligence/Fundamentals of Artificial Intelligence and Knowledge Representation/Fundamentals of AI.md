@@ -26,6 +26,7 @@ General AI copes with generalised tasks much like a human, while Narrow AI refer
 	- logics, ontologies, rule-based systems, …
 	- human-understandable models
 	It can perform deductive and inductive reasoning, hypotheticals, analogies and can constraint reasoning and optimization.
+	These models are reliable and can be trusted (it can give guarantees of success).
 - **Bottom-up/connectionist** AI
 	- neural networks
 	- encoded representation of knowledge
@@ -85,3 +86,42 @@ Induction infers a rule that can return true or false, depending on the existing
 ### Abduction
 Produces an hypothesis on the basis of previous knowledge and observation (for example using integrity constraints to control hypothesis).
 ![[Pasted image 20260916142526.png|499]]
+
+---
+# Automated Planning
+Planning is a **symbolic model** that synthesise a sequence of actions performed by an agent.
+Given a **goal** and an **initial state**, planning allows to generate a chain of actions that point to the target state.
+
+>[!info] Plan
+>A partially or totally ordered set of actions needed to achieve the goal from the initial state.
+
+An **automated planner** operates in a domain described by:
+1. a representation of the initial state
+2. a representation of the goal
+3. a description of the **executable actions**/operators.
+
+>[!info] Operators
+>Operators are defined by two lists:
+>1. **Preconditions** that need to be true for the action to be executed.
+>2. **Changes/consequences** to the actions.
+
+
+A planner must be **correct** and **complete**.
+- **Correct**:
+	The plan that is produced reached the goal.
+- **Complete**:
+	If a plan exists, then the planner is able to find it.
+
+## Swarm intelligence
+Distributed (no central coordination) intelligence inspired from nature, similar to genetic algorithms.
+The agents in the swarm cooperate and self-organise until an intelligence algorithm emerges. This system is very adaptive and doesn't need supervision.
+
+## Reinforcement learning
+RL can also be used for planning tasks.
+![[Pasted image 20260923124550.png|361]]
+
+Given an $input$ the learner suggests a response (an action) that is actually **performed** on the system ("**on-line planner**").
+Depending on whether the system ends up in a negative state or in a positive state, the learner is either **punished** or **rewarded**.
+
+>[!reminder] Only use RL if the system can afford errors.
+

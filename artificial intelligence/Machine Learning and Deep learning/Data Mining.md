@@ -163,6 +163,9 @@ A common type of schema structure for DWs is "**star-schema**":
 Also defined as "**schema-on-read**", are made for the storage of raw, unstructured data, kept as-is.
 DLs are useful for logs, texts, images, streams ...
 
+[[Data Lakes|In-depth analysis of Data Lakes.]]
+
+
 >[!important] So far
 >![[Pasted image 20260917164806.png]]
 
