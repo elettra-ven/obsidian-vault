@@ -731,6 +731,9 @@ $$
 (\mathbf{A}-\lambda \mathbf{I})\mathbf{x} = \mathbf{0}
 $$
 
+or, equivalently into
+$$\mathbf{A}\mathbf{x} = \lambda\mathbf{x}$$
+
 and solve the resulting homogeneous system. Any nonzero solution is an eigenvector associated with $\lambda$.
 
 **Suggested Exercise 15.**
@@ -798,7 +801,7 @@ where:
 - $\mathbf{V} \in \mathbb{R}^{n \times n}$ is an orthonormal matrix,
 - $\mathbf{\Sigma} \in \mathbb{R}^{m \times n}$ is diagonal in the rectangular sense, with nonnegative entries on the diagonal.
 
-The diagonal entries of $\mathbf{\Sigma}$ are the **singular values** of $\mathbf{A}$:
+The diagonal entries of $\mathbf{\Sigma}$ are the **singular values** (square roots of $\mathbf{A}\mathbf{A}^\top$ eigenvalues) of $\mathbf{A}$:
 
 $$
 \sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0,
@@ -874,7 +877,7 @@ so the left singular vectors **$\mathbf{U}$** are eigenvectors of **$\mathbf{A}\
 
 # Vector Calculus
 
-Vector calculus is one of the main mathematical tools needed in statistics and machine learning. The key reason is that many estimation/learning problems are phrased as optimization problems: we choose parameters to minimize a loss or maximize a likelihood. Gradients tell us how the objective changes when we change the parameters, and therefore point to directions used by optimization algorithms.
+Vector calculus is one of the main mathematical tools needed in statistics and machine learning. The key reason is that many estimation/learning problems are phrased as **optimization problems**: we choose parameters to minimize a loss or maximize a likelihood. Gradients tell us how the objective changes when we change the parameters, and therefore point to directions used by optimization algorithms.
 
 ## Gradient 
 
