@@ -10,7 +10,7 @@
 Agents need to act under uncertainty, so we should provide them techniques and methods to manage these situations.
 For example, we can build AI models without handling *noise*.
 
-![[Pasted image 20260921094318.png|505]]
+![[img/Pasted image 20260921094318.png|505]]
 
 >[!tip] An intelligent agent must often choose an action without knowing its outcome with certainty. 
 >Probability represents beliefs about uncertain outcomes; 
@@ -92,7 +92,7 @@ Random variables can also be used to define **events**:
 Let *a* be a proposition. Its probability is the  probability of each atomic event where *a* is true.
 Therefore, a proposition is a disjunction of mutually exclusive atomic events:
 
-![[Pasted image 20260921180612.png]]
+![[img/Pasted image 20260921180612.png]]
 
 For example:
 $$a \vee b ≡ (a \wedge b) \vee (a \wedge \neg b) \vee (\neg a \wedge b) $$$$P(a \vee b) = P(a \wedge b) + P(a \wedge \neg b) + P(\neg a \wedge b)$$
@@ -129,10 +129,10 @@ For a continuous random variable, probabilities concern regions of possible valu
 Therefore, the probability that $X$ falls in an interval $[a,b]$ is the area under its density curve, $\int_{a}^{b}p_X(X)\mathrm{d}x$.
 ### Distributions:
 - #### Uniform
-	![[Pasted image 20260921203640.png|301]]
+	![[img/Pasted image 20260921203640.png|301]]
 	$$p_X(x) = \begin{cases} \frac{1}{b - a} & \text{if } a \le x \le b, \\ 0 & \text{otherwise.} \end{cases}$$
 - #### Gaussian (Normal)
-	![[Pasted image 20260921204325.png|305]]
+	![[img/Pasted image 20260921204325.png|305]]
 	If:
 	$$X \sim \mathcal{N}(\mu, \sigma^2)$$
 	Then its pdf is:

@@ -48,7 +48,7 @@ Phyton allows Boolean operations to be consistently defined for any object, even
 >[!success] For example, `0`, `None` and `""` are **Falsy**.
 
 ==Two names can be bound to the same object== (**aliases**), for example:
-![[AdobeExpressPhotos_e69357aaf4cf44df8538ee32e6d7034b_CopyEdited.png|141]]
+![[img/AdobeExpressPhotos_e69357aaf4cf44df8538ee32e6d7034b_CopyEdited.png|141]]
 In this instance, x and y have the same ID.
 Since we are now working with **immutable** objects (such as integers and strings), the machine reads 2 an object itself (but this is just an implementative choice, ideally the two variables would point to different elements):
 ```

@@ -7,7 +7,7 @@
 >[!NOTE] **Insight**
 >An **insight** is a meaningful and actionable understanding derived from discovered **patterns** that can support decision-making.
 
-![[Pasted image 20260916102234.png]]
+![[img/Pasted image 20260916102234.png]]
 
 Eventually, data can generate a sequence of actions.
 
@@ -28,7 +28,7 @@ When the state of the enterprise is changed, one of the following events happen:
 ## Layers of Information Systems 
 
 IS can be layered to simplify and abstract operations in the business workflow.
-![[Pasted image 20260916103706.png]]
+![[img/Pasted image 20260916103706.png]]
 
 ## Business Intelligence (BI)
 
@@ -39,7 +39,7 @@ The **BI Architecture** is necessary in big organisations and is layered as foll
 2. **Staging Layer**: extracts the data and transforms it to correctly load it in the DW.
 3. **Data**: is the lowest layer of the "stack", and is composed by raw and un-organised elements.
 
-![[Pasted image 20260916104259.png|405]]
+![[img/Pasted image 20260916104259.png|405]]
 
 ## Analytics vs Data Mining
 
@@ -50,7 +50,7 @@ The **BI Architecture** is necessary in big organisations and is layered as foll
 	Sometimes they can provide insights in order to define a new structured decision.
 
 ### Structured vs Unstructured Decisions
-![[Pasted image 20260916104820.png]]
+![[img/Pasted image 20260916104820.png]]
 
 Structured decisions are similar to rules or mechanical and deterministic pipelines.
 Unstructured decisions are made "on the fly", and require a knowledge of the external environment to understand the set of possibilities and potential actions.
@@ -95,7 +95,7 @@ Big Data can also be processed without Cloud Computing. In many cases Cloud Comp
 It's an intersection between statistics, pattern recognition and DB systems, and it is strictly tied to Machine Learning:
 The current consensus sees Data Mining as the discovery process from data sources to  knowledge, and ML for Data Mining as the core of learning models and algorithms which allow the extraction of patterns.
 
-![[Pasted image 20260916111306.png|532]]
+![[img/Pasted image 20260916111306.png|532]]
 
 
 We can select data according to our ML task. 
@@ -121,7 +121,7 @@ To allow the different parts to work together they have to speak a **common tong
 
 + ### CRISP-DM cycle
 	It focuses on **data-driven decisions**.
-![[Pasted image 20260917154747.png|420]]
+![[img/Pasted image 20260917154747.png|420]]
 
 1. **Business Understanding** 
 	What problem are we actually solving.
@@ -151,12 +151,12 @@ It needs to be stored somewhere else:
 
 To extract data from OLTPs and move it to DWs we need **ETL** (Extract, Transform, Load) **operations**.
 
-![[Pasted image 20260917164132.png|598]]
+![[img/Pasted image 20260917164132.png|598]]
 
 DWs are structured and store pre-modelled data. They are also defined as "**schema-on-write**", since the schema design must be defined before the data arrives.
 
 A common type of schema structure for DWs is "**star-schema**":
-![[Pasted image 20260917164652.png|362]]
+![[img/Pasted image 20260917164652.png|362]]
 
 [[Data Warehouses|In-depth analysis of Data Warehouses.]]
 ## Data Lake
@@ -167,5 +167,5 @@ DLs are useful for logs, texts, images, streams ...
 
 
 >[!important] So far
->![[Pasted image 20260917164806.png]]
+>![[img/Pasted image 20260917164806.png]]
 

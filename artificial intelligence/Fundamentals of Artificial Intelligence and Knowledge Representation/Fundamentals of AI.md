@@ -37,8 +37,8 @@ General AI copes with generalised tasks much like a human, while Narrow AI refer
 Declarative programming language.
 A **PROLOG Program** is a set of clauses representing **facts**, **rules** and **goals**:
 
-![[Pasted image 20260916135423.png]]
-![[Pasted image 20260916135444.png|288]]
+![[img/Pasted image 20260916135423.png]]
+![[img/Pasted image 20260916135444.png|288]]
 
 The programmer provides the knowledge about the goal task. 
 The inference engine takes the knowledge provided and finds the correct solution to the task.
@@ -82,10 +82,10 @@ $$Y=2$$
 
 ### Induction
 Induction infers a rule that can return true or false, depending on the existing information.
-![[Pasted image 20260916142410.png|455]]
+![[img/Pasted image 20260916142410.png|455]]
 ### Abduction
 Produces an hypothesis on the basis of previous knowledge and observation (for example using integrity constraints to control hypothesis).
-![[Pasted image 20260916142526.png|499]]
+![[img/Pasted image 20260916142526.png|499]]
 
 ---
 # Automated Planning
@@ -118,7 +118,7 @@ The agents in the swarm cooperate and self-organise until an intelligence algori
 
 ## Reinforcement learning
 RL can also be used for planning tasks.
-![[Pasted image 20260923124550.png|361]]
+![[img/Pasted image 20260923124550.png|361]]
 
 Given an $input$ the learner suggests a response (an action) that is actually **performed** on the system ("**on-line planner**").
 Depending on whether the system ends up in a negative state or in a positive state, the learner is either **punished** or **rewarded**.

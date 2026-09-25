@@ -1,7 +1,7 @@
 Modelling based on **schema-on-read** paradigm:
 >Data is written in its raw format (as-is) and structure is imposed only when a **reading** operation occurs.
 
-![[Pasted image 20260923110522.png]]
+![[img/Pasted image 20260923110522.png]]
 
 A data lake should NOT turn into a **Data Swamp**:
 

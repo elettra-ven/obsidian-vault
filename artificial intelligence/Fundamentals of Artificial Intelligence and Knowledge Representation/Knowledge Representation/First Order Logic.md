@@ -33,7 +33,7 @@ The goal of the propositional logic it to decide if **G** is a valid formula.
 For this purpose, we temporally change the goal to *decide if, **given some formulas that are true**, G is also true*.
 ### Logical equivalence
 
-![[Pasted image 20260921113635.png|502]]
+![[img/Pasted image 20260921113635.png|502]]
 
 This syntactic procedure is able to deduce the formulas from a formal problem (resolution). 
 ### Reasoning
@@ -70,7 +70,7 @@ A clause is a disjunction of literals.
 We consider a set of clauses in **Conjunctive Normal Form** (CNF): way of writing a logical formula as an **AND** of **ORs**.
 
 Example of **resolution**:
-![[Pasted image 20260921115343.png|517]]
+![[img/Pasted image 20260921115343.png|517]]
 
 ---
 ## Example of Refutation and Resolution together
@@ -87,7 +87,7 @@ We use **resolution**:
 2. Negate the formula G and add it to the KB 
 3. Apply the resolution principle (to all the clauses) until we reach the inconsistency
 
-![[Pasted image 20260921115904.png|419]]
+![[img/Pasted image 20260921115904.png|419]]
 
 ---
 ## Exercise

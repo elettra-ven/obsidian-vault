@@ -8,19 +8,19 @@ The **test-set** is a portion of the labelled dataset that is used to calculate 
 
 ## (Two input) perceptron
 
-![[Pasted image 20260917102621.png|424]]
+![[img/Pasted image 20260917102621.png|424]]
 
 The pattern belonging to the class will be those such that:
 $$w_1 x_1 + w_2 x_2 - \theta > 0$$
 Where $\theta$ is the *bias* of the perceptron.
 This equation results in a line in a bidimensional space:
 
-![[Pasted image 20260917102821.png|379]]
+![[img/Pasted image 20260917102821.png|379]]
 
 ## $\mathbf{n}$-layer networks
 
 For example a 3-layer network is able to separate convex regions number of edges $\leq$ number hidden neurons.
-![[Pasted image 20260917103056.png|394]]
+![[img/Pasted image 20260917103056.png|394]]
 
 
 The **perceptron** can represent only linear functions. 

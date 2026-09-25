@@ -2,11 +2,11 @@ Data warehouses are useful when data is already clean, conformed and aggregated.
 It's a good fit for features that are naturally roll-up style, but it performs poorly for raw and event-level data.
 ## OLTP $vs$ OLAP
 
-![[Pasted image 20260923094355.png|508]]
+![[img/Pasted image 20260923094355.png|508]]
 
 ## ETL process
 
-![[Pasted image 20260923095603.png|508]]
+![[img/Pasted image 20260923095603.png|508]]
 
 >[!info] Extraction & Loading
  can be a **Snapshot** or an **incremental** extraction (occurs every time the data is changed). 
@@ -43,13 +43,13 @@ The model is divided different tables and elements:
 >The description are often denormalized into a *flattened* structure for query semplicity.
 
 Dimensions are organized with a hierarchical system for the descriptive attributes:
-![[Pasted image 20260923100547.png|339]]
+![[img/Pasted image 20260923100547.png|339]]
 
 ### "Grain"
 Is the representation of a single row of the **facts** table.
 
 
-![[Pasted image 20260923102551.png|497]]
+![[img/Pasted image 20260923102551.png|497]]
 - *Star Schema*
 
 >[!note] Example
@@ -68,7 +68,7 @@ Is the representation of a single row of the **facts** table.
 >Time, product, store, customer is the finer grain we can achieve with this Schema.
 
 # Data Cube
-![[Pasted image 20260923104059.png|344]]
+![[img/Pasted image 20260923104059.png|344]]
 ## Operations
 - Slicing
 - Dicing

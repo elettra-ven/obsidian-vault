@@ -8,10 +8,10 @@ Searching is based on the exploration of a **search tree** that represents the e
 
 The **leaves** of the search tree (nodes that can't be expanded) represent **success** states or **failures** (dead ends).
 
-![[Pasted image 20260924154344.png]]
+![[img/Pasted image 20260924154344.png]]
 
 Let's implement this:
-![[Pasted image 20260924155213.png]]The *fringe* is the set of node that are not yet expanded.
+![[img/Pasted image 20260924155213.png]]The *fringe* is the set of node that are not yet expanded.
 
 # Non-informed search strategies
 >Do not use any domain knowledge and apply rules arbitrarily.
@@ -54,7 +54,7 @@ This **avoids** cases of **infinite branches**.
 The implementation of LDS can be recursive or iterative:
 
 ### Recursive DLS
-![[Pasted image 20260924174430.png|532]]
+![[img/Pasted image 20260924174430.png|532]]
 ### Iterative DLS
 ```
 1. C = 1
@@ -70,4 +70,4 @@ The total number of expansion is:
 $$(d+1)1+(d)b+(d-1)b^2+...+3b^{d-2}+2b^{d-1}+b^d$$
 which is not considerably worse than the standard strategies.
 
-![[Pasted image 20260924175015.png|509]]
+![[img/Pasted image 20260924175015.png|509]]
