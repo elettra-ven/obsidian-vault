@@ -82,10 +82,10 @@ We know that we can prove the above if we prove the **inconsistency** of $F_1 \w
 We must prove that there is no prossible interpretation $\Im$ that makes the formula ($F_1 \wedge ... \wedge F_n \neg G$) true.
 
 We use **resolution**:
-1. Transform our knowledge base KB in CNF form: 
+1. [[TRANSFORMATION INTO CLAUSES|Transform our knowledge base KB in CNF form]]: 
 	each conjunct will be a clause 
 2. Negate the formula G and add it to the KB 
-3. Apply the resolution principle (to all the clauses) until we reach the inconsistency
+3. [[APPLICATION OF RESOLUTIONS|Apply the resolution principle]] (to all the clauses) until we reach the inconsistency
 
 ![[img/Pasted image 20260921115904.png|419]]
 
@@ -143,3 +143,41 @@ They are **recursively** defined as:
 2. If $\phi$ and $\psi$ are WFF, their **logical connections** are also WFF.
 3. If $\phi$ is a WFF, given a variable X, $\exists X \, \phi$ and $\forall X \, \phi$ are also WFF
 
+---
+
+>[!tip] Exercise: **The Meeting Report Premises**: 
+>Let: 
+>**a** = Ann attends the meeting 
+>**b** = Bob presents 
+>**c** = Carla presents 
+>**r** = The report is ready 
+>
+>If Ann attends the meeting, then Bob or Carla will present. 
+>$$a \rightarrow (b \vee c)$$
+>
+>If Bob presents, the report will be ready. 
+>$$b \rightarrow r$$ 
+>
+>If Carla presents, the report will be ready. 
+>$$c \rightarrow r$$
+>
+>The report is not ready. 
+>$$\neg r$$ 
+>
+>**Goal**: 
+>	Prove that Ann did not attend the meeting: 
+>	$$\neg a$$
+
+1. $\neg a \vee b \vee c$
+2. $\neg b \vee r$
+3. $\neg c \vee r$
+4. $\neg r$
+**we negate the goal formula:**
+5. $a$
+**Apply the resolution principle:**
+6. $b \vee c$  $\leftarrow$ **(1. + 2.)**
+7. $\neg c$  $\leftarrow$ **(2. + 4.)**
+**new goal:**
+8. $c$  $\leftarrow$ **(2. + 4.)**
+9. $c$  $\leftarrow$ **(3. + 4.)**
+10.  ==**We reached a contradiction/inconsistency**==  $\leftarrow$ **(8. + 9.)**

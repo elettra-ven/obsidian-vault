@@ -169,3 +169,31 @@ DLs are useful for logs, texts, images, streams ...
 >[!important] So far
 >![[img/Pasted image 20260917164806.png]]
 
+---
+# Six-phase CRISP-DM in depth
+![[img/Pasted image 20260928130405.png|335]]
+
+>[!info] Data understanding
+>+ **Collect** initial data
+>+ **Describe** data
+>+ **Explore** data
+>+ **Verify** data quality (completeness, correctness, consistency)
+
+>[!info] Data preparation
+>
+**Select** $\rightarrow$ **Clean** $\rightarrow$ **Construct** $\rightarrow$ **Integrate** $\rightarrow$ **Format**
+>
+>This phase is specialized for loading a warehouse when called **ETL**. But it can be studied in the task sequence in a more general form.
+
+>[!info] Modelling
+>- **Select** technique 
+>- **Generate** test design 
+>- **Build** model 
+>- **Assess** model
+
+>[!info] Deployment
+>After a final **evaluation**:
+>- Plan deployment 
+>- Plan monitoring & maintenance 
+>- Produce a final report 
+>- Review the project

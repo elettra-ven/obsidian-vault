@@ -8,34 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fca9b89379f6932e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Running example - Nordic Mart"
-            }
-          },
-          {
             "id": "c1f86dce64a8f426",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Artificial Intelligence Applications.md",
+                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Artificial Intelligence Applications"
+              "title": "APPLICATION OF RESOLUTIONS"
+            }
+          },
+          {
+            "id": "8ce09c7a6114ff34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,17 +111,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE"
+              "title": "Riferimenti"
             }
           },
           {
@@ -129,12 +130,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE"
+              "title": "Collegamenti in uscita"
             }
           },
           {
@@ -181,11 +182,12 @@
               "title": "Struttura di INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -199,54 +201,55 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "fca9b89379f6932e",
+  "active": "8ce09c7a6114ff34",
   "lastOpenFiles": [
-    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
-    "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
-    "artificial intelligence/Machine Learning and Deep learning/Data Mining.md",
-    "artificial intelligence/Machine Learning and Deep learning/Data Lakes.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Regression.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/TRANSFORMATION INTO CLAUSES.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Unbounded iterations.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/First Order Logic.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Introduction to uncertainty and probabilistic reasoning.md",
+    "artificial intelligence/Machine Learning and Deep learning/Data Mining.md",
+    "Pasted image 20260928130405.png",
+    "artificial intelligence/Machine Learning and Deep learning/Data Lakes.md",
+    "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
+    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
+    "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
+    "Pasted image 20260928125244.png",
+    "Pasted image 20260928125207.png",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Introduction to uncertainty and probabilistic reasoning.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Independence.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Non-informed Search Strategies.md",
+    "Pasted image 20260928103242.png",
+    "Pasted image 20260928102403.png",
+    "Pasted image 20260928102107.png",
+    "Pasted image 20260928095835.png",
+    "Pasted image 20260928092525.png",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Artificial Intelligence Applications.md",
+    "desktop.ini",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Regression.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Clustering.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Objects in Python.md",
     "Pasted image 20260916135444.png",
     "Pasted image 20260916135423.png",
-    "Pasted image 20260916111306.png",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 1 - Basics of Linear Algebra.md",
-    "img/Pasted image 20260916104820.png",
-    "img/Pasted image 20260916104259.png",
-    "img/Pasted image 20260916103706.png",
-    "img/Pasted image 20260916102234.png",
-    "img/AdobeExpressPhotos_e69357aaf4cf44df8538ee32e6d7034b_CopyEdited.png",
     "img",
     "organize_imgs.py",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Non-informed Search Strategies.md",
-    "Pasted image 20260924175015.png",
-    "Pasted image 20260924174430.png",
     "artificial intelligence/Machine Learning.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Artificial Intelligence Applications.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Classification.md",
     "artificial intelligence/Artificial Intelligence.canvas",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
-    "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Detailed Course Syllabus.md",
     "personal-git-ignore",
     "artificial intelligence/Artificial Intelligence.md",
-    "desktop.ini",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Objects in Python.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation",
     "Senza nome.base",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Clustering.md",
     "Module 1 -- Basics of Linear Algebra.md",
     "README.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation",
     "artificial intelligence/Machine Learning and Deep learning",
-    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Linear Algebra, Principal Component Analysis, Statistical Inference, and Regression.md",
-    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence",
-    "2026-09-14.md",
-    "LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE.md"
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence"
   ]
 }

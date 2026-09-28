@@ -166,6 +166,40 @@ https://docs.python.org/3/library/
 
 When we `import` a library we bring into the global frame a set of **fully qualified names** bound to specific objects.
 
+### Can functions modify global objects?
+```
+b=20 
+
+def f(a): 
+	a=10 
+	b=100 
+	return None 
+	
+f(b) 
+print(b)
+```
+The result of the printing is `20`!
+`a`,`b` are local names in the body of `f`.
+
+```
+b=20 
+
+def f(a):
+	global b     # <-- !!! 
+	a=10 
+	b=100 
+	return None 
+	
+f(b) 
+print(b)
+```
+This returns `100`.
+
+Modifying global **mutable** objects can be done in multiple ways:
+1. Through a mutable actual parameter
+2. Through a global name, bound to a mutable object
+In both cases we call the object with a **selection**, not with the name.
+
 ---
 ## Loops
 
@@ -174,7 +208,7 @@ for <name> in <sequence>:
 	<block>
 ```
 
-It's a bounded iteration that express a repetition.
+It's a **bounded iteration** (distinct from [[Unbounded iterations|unbounded iterations]]) that express a repetition.
 
 1. `<sequence>` is computed and "**frozen**".
 2. If `<name>` does not exists, it is created.
@@ -219,3 +253,94 @@ tuple((1,2,3))  ->  (1,2,3)
 >	return newS
 >```
 
+### Lists
+It's a structured type that has as values a finite and **mutable** sequence of objects. 
+
+>[!info] Mutable
+>This means we can modify the **value** of an **object** preserving its identity.
+>```
+L=[10,20,30] 
+L[1] = 200
+>```
+>The object bound to `L` did not change.
+>Its value did.
+
+Lists can be **concatenated**, **repeated**, **selected**, etc...
+
+### **Aliasing** and side effects
+```
+L = [10,20,30]
+V = L
+L[0]=100
+print(V)
+```
+The result prints:
+```
+	[100, 20, 30]
+```
+
+Since there is aliasing (`V` and `L` are **aliases for the same object**), `V` gets modified by ***side effect***.
+
+### Deleting elements from a list
+```
+del L[i]
+```
+`L[i]` is eliminated from `L` and the elements following the element are "shifted to the left".
+
+>[!important] `del` does NOT work with `for` cycles!
+>Never use `for` on lists, if their length is modified in the for body.
+>In general, don't use lists in presence of side effects!!
+>
+>The heading of the `for` command freezes the sequence object (its **identity**) **not its value**.
+
+Many methods/selections of lists may be done with the **slicing** function.
+
+```
+L=[1,2,3]
+
+L[0:2]=[10,20]   # --> [10,20,3]
+L[0:1]=[5,6]     # --> [5,6,20,3]
+L[-1:]=[4]       # --> [5,6,30,4]
+L[1:1]=[1,2]     # --> [5,1,2,6,20,4]
+L[0:2]=[]        # --> [2,6,20,4]
+L[0:0]=[1]       # --> [1,2,6,20,4]
+L[len(L):]=[30]  # --> [1,2,6,20,4,30]
+```
+
+For example,
+`del L[i:j]` is equivalent to `L[i:j] = []`
+
+>[!warning] Careful:
+>`L = L + [element]`
+>creates a new object, while
+>`L.append(element)`
+>doesn't.
+
+### Augmented assignment
+`+=  -=  *=  /=  //=  %=  **=`
+
+These operations are **done in place**, if possible.
+LHS is evaluated first.
+
+---
+# Recursion
+Functions may call functions in their body.
+Hence a function may call itself in its body (the name of a function is in scope within the function).
+
+Recursion is composed by:
+- a **base** case
+- a **recursive** case
+Termination occurs when the recursive case ends on a **simpler** (closer to the base) case.
+
+>[!warning] General theorem of the **theory of computation**
+>Any computation that is expressible through iteration is also expressible through recursion. And vice versa.
+
+---
+
+## Dictionaries
+A dictionary is a generalization, a mutable mapping between immutable objects (*keys*) and arbitrary objects (*values*).
+
+These structures are NOT sequences, therefore they can't be sliced or concatenated.
+
+Similarly to lists, dictionaries must not be used inside `for` cycles, if their length is modified in the body.
+Additionally, a modification to a dictionary which is used to control a `for` raises a run time error!

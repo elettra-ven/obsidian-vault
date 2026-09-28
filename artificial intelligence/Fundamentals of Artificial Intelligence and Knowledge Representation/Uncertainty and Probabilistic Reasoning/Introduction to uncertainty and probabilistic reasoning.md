@@ -168,6 +168,45 @@ P(X_1, \dots, X_n) &= P(X_1, \dots, X_{n-1}) P(X_n \mid X_1, \dots, X_{n-1}) \\
 \end{aligned}$$
 
 # Inference using **full joint distributions**
-If we know a complete joint probability distribution, we can answer any probability query by **summing** the entries corresponding to the possible worlds in which the query is true.
-For any proposition $\phi$, we sum the events in which $\phi$ is true:
+If we know a complete joint probability distribution, we can answer any probability query by **summing** **the entries** corresponding to the possible worlds in which the query is true.
+In our table, for any proposition $\phi$, we sum the events in which $\phi$ is true:
 $$P(\phi) = \sum_{\omega : \omega \models \phi} P(\omega)$$
+We can also use the full joint table to compute **conditional probabilities**.
+For example:
+
+>We start with the following joint distribution
+![[img/Pasted image 20260928092525.png]]
+
+$$P(\neg\text{cavity} \mid \text{toothache}) = \frac{P(\text{cavity} \land \text{toothache})}{P(\text{toothache})}$$
+$$\implies P(\neg\text{cavity} \mid \text{toothache}) = \frac{0.016+0.064}{0.108+0.012+0.016+0.064}$$
+
+## Normalization I
+A vector of probabilities contains the probability mass of the two alternatives in the original joint distribution.
+
+>[!info] Norm I
+>We redistribute this mass over the two remaining alternatives so that their probabilities sum to 1, while preserving their relative weights.
+
+The normalization factor can be denoted by $\alpha$ :
+$$\alpha = \frac{1}{P(\text{probability mass of the original joint distribution})}$$
+
+### Probability query
+A probability query asks for the agent’s posterior joint probability distribution over one or more query variables $Y$ , given observed values $E = e$ of some evidence variables:
+$$P(Y \mid E=e)$$
+
+- $X$: all random variables in the domain.
++ $Y$: query variables, whose posterior distribution we seek;
++ $E$: evidence variables, whose values e have been observed;
++ $H = X \\ (Y \cup E)$  hidden variables
+
+>[!info] Conditional inference
+>Is an enumeration of  possible worlds with evidence.
+>1. Fix the observed evidence $E = e$. 
+>2. For each possible value of $Y$ , sum the probabilities of all compatible worlds, varying the hidden variables $H$. 
+>3. Normalize the resulting values using $\alpha$, so that the distribution over $Y$ sums to 1.
+
+The queries can be answered by fixing the evidence and summing over every possible assignment $h$ of the hidden variables:
+$$P(Y \mid E=e) = \alpha P(Y,E=e) = \alpha \sum_h P(Y, E=e, H=h)$$
+
+
+
+
