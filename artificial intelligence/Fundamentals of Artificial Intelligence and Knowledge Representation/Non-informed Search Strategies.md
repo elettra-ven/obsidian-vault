@@ -71,3 +71,14 @@ $$(d+1)1+(d)b+(d-1)b^2+...+3b^{d-2}+2b^{d-1}+b^d$$
 which is not considerably worse than the standard strategies.
 
 ![[img/Pasted image 20260924175015.png|509]]
+
+---
+
+# Comparison of search strategies
+
+| Criterion | Breadth-First | Uniform-Cost | Depth-First | Depth-Limited   | Iterative Deepening | Bidirectional (if applicable) |
+| --------- | ------------- | ------------ | ----------- | --------------- | ------------------- | ----------------------------- |
+| Time      | $b^d$         | $b^d$        | $b^m$       | $b^l$           | $b^d$               | $b^{d/2}$                     |
+| Space     | $b^d$         | $b^d$        | $bm$        | $bl$            | $bd$                | $b^{d/2}$                     |
+| Optimal?  | Yes           | Yes          | No          | No              | Yes                 | Yes                           |
+| Complete? | Yes           | Yes          | No          | Yes, if $l ≥ d$ | Yes                 | Yes                           |

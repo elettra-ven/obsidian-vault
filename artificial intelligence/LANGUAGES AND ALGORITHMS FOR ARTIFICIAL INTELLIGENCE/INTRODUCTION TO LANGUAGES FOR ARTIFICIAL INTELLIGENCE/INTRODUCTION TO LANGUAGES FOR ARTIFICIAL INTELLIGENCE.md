@@ -37,7 +37,20 @@ There is no direct connection between Python data and machine representation (it
 	and the **name** of the type itself.
 
 $$x \rightarrow obj \rightarrow (val, type, id)$$
-"x" is a name bound to an [[Objects in Python|object]], which has a value, a type, and an ID. This relation is called "state" of an object.
+"x" is a name bound to an object, which has a value, a type, and an ID. This relation is called "state" of an object.
+
+>[!definition] Object
+>An object is a value enveloped in an identity.
+>This identity is unique during a run of the Python machine.
+
+In Python, any value is an object.
+The Python machine controls completely the **identity** of the object.
+### Methods
+The envelope enclosing an object contains, besides its identity, also other information:
+An important information of an object are its **methods**.
+
+An object is an "**active value**": we may stimulate the object through the methods offered by its envelop.
+The methods are often bound to the **type** of the object.
 
 The object is the binding element between the value and its type.
 
@@ -142,7 +155,7 @@ They help with the subdivision of a main program in smaller, simpler, single-pur
 Every time a function is called a **new frame** is generated to keep the related data separated from the rest of the *global frame*.
 The frame is then destroyed once the function returns a final value.
 
-When a name is called, the frame first checks for it inside of its **scope**. If it doesn't find it locally, it searches for it in the external frame.
+When a name is called, the frame first checks for it inside of its **[[Accessing Scopes|scope]]**. If it doesn't find it locally, it searches for it in the external frame.
 For example:
 ```
 A = 10 
@@ -208,7 +221,7 @@ for <name> in <sequence>:
 	<block>
 ```
 
-It's a **bounded iteration** (distinct from [[Unbounded iterations|unbounded iterations]]) that express a repetition.
+It's a **bounded iteration** that express a repetition.
 
 1. `<sequence>` is computed and "**frozen**".
 2. If `<name>` does not exists, it is created.
@@ -234,6 +247,27 @@ d
 i
 Michael
 ```
+
+### Unbounded iterations
+The program doesn't know beforehand how many extractions will be performed. There often is a condition that has to be satisfied for the iteration to be considered completed, however, this can result in infinite loops.
+
+#### `while` command
+The iteration continues as long as the expression in the *guard* is evaluated as `True`.
+
+We can approximate some bounded iterations to unbounded iterations:
+```
+for i in range(len(s)):
+	<body>
+```
+
+```
+i = 0
+while i < len(s):
+	<body>
+	i = i+1
+```
+
+The unbounded iteration does not "freeze" neither `s` nor its length.
 
 ### Tuples
 It's an immutable sequence of objects, that groups different values, each of them of arbitrary type.
@@ -344,3 +378,101 @@ These structures are NOT sequences, therefore they can't be sliced or concatenat
 
 Similarly to lists, dictionaries must not be used inside `for` cycles, if their length is modified in the body.
 Additionally, a modification to a dictionary which is used to control a `for` raises a run time error!
+
+>[!info] The method `get()`
+>It can be used to perform the "*if key present, otherwise update*" check, using the `default` argument:
+>```
+>D.get(key, default)
+>```
+>Returns `D[key]` if it exists, otherwise returns the default option.
+
+The methods
+	`D.keys()` 
+	`D.values()` 
+	`D.items()`
+return **view objects** on keys, values and items (pairs).
+These dynamic lists can be *frozen* into lists:
+	`list(D.items())`
+	returns a list of tuples.
+
+>[!warning] `list(D)` is equivalent to `list(D.keys())`
+
+>[!info] The method `update()`
+>It can be used as a substitute for **concatenation** in dictionaries, which do not support that type of operation:
+>```
+>D1.update(D2)
+>```
+>It extends `D1` with the items of `D2`, if there are equal keys in `D1` and `D2`, the ones in `D2` ("update") are chosen.
+
+---
+## Comprehension
+
+>[!info] Comprehension principle
+>It's the operation by which, given a condition expressible by a formula $\phi (x)$, we form the set of all those $x$ meeting that condition:
+>$$\{x \mid \phi(x)\}$$
+
+`doubles=[2*i for i in range(1,101)]`
+
+Expressed in a compact way, it returns the doubles of the numbers from 0 to 100.
+
+### Nested comprehension
+For example:
+	*The list of lists of numbers from 0 to i, for i less than 20*
+
+`[ [k for k in range(i)] for i in range(21)]`
+
+### List Comprehension
+
+`[expression for name in sequence]`
+
+`expression` is always evaluated in its local frame and **after** the `for name in sequence`.
+
+>[!info] `[expression for name in sequence series of for/if]`
+>is equivalent to
+>```
+>res=[] 
+>for name in sequence : 
+>	series of for/if 
+>		res.append(expression) 
+>return res
+>```
+
+### Comprehensions on dictionaries
+
+`{key:val for name in sequence}`
+
+For example:
+```
+{i:[k for k in range(i)] for i in range(10)}
+```
+
+>[!warning] There is no comprehension on tuples
+
+However, expressions which seem "tuple comprehension" are legal Python code, and are called **generators**:
+
+```
+G = (i*2 for i in range(10))
+```
+
+>[!info] Generators
+>A generator is a kind of "potential sequence/tuple" which is able to generate the elements of the sequence, through the predefined function `next(…)`.
+>```
+>next(G) # : evaluates to 0 
+>next(G) # : evaluates to 2 
+>next(G) # : evaluates to 4 
+>next(G) # : the generator is exhausted an error is raised
+>```
+>
+>It is a particular case of **iterator**.
+
+>[!warning] Command `yield`
+>```
+>yield expression
+>```
+>The presence of `yield` make the `def` define a generator.
+
+It returns the value of `expression` and suspends the evaluation of the function (the frame is not destroyed, all the values of the local names are preserved, the point where execution is paused is preserved).
+
+- Calling the generator's name returns the generator's **object** (the body is **not** evaluated yet).
+- Calls to the function `next(G)` cause the execution of the body of the generator, until `yield` is found.
+- `yield` suspends the execution of the body and returns the value of the `expression` ad value of the call to `next(G)`.

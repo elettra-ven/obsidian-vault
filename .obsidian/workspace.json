@@ -4,39 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "eb9051320b26a68d",
+        "id": "139a593ea86f375f",
         "type": "tabs",
         "children": [
           {
-            "id": "c1f86dce64a8f426",
+            "id": "3f53bb416a03899f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
+                "file": "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "APPLICATION OF RESOLUTIONS"
+              "title": "Glycolysis"
             }
           },
           {
-            "id": "8ce09c7a6114ff34",
+            "id": "df8d56557d988794",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Informed Search Strategies.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE"
+              "title": "Informed Search Strategies"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+                "file": "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+                "file": "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -201,55 +200,57 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "8ce09c7a6114ff34",
+  "active": "3f53bb416a03899f",
   "lastOpenFiles": [
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
+    "genomics/Principles of Biochemistry and Metabolomics/Metabolism.md",
+    "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
+    "genomics/Principles of Biochemistry and Metabolomics/Chemical reactions in cells.md",
+    "Pasted image 20261003110946.png",
+    "Pasted image 20261003104151.png",
+    "Senza nome.base",
+    "Pasted image 20261002141854.png",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Informed Search Strategies.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/TRANSFORMATION INTO CLAUSES.md",
+    "artificial intelligence/Machine Learning and Deep learning/Exploratory Data Analysis.md",
+    "Senza nome.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Accessing Scopes.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Comprehension.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Artificial Intelligence Applications.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Objects in Python.md",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Unbounded iterations.md",
+    "Pasted image 20261002112207.png",
+    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
+    "Pasted image 20261002104537.png",
+    "Pasted image 20261002102703.png",
+    "desktop.ini",
+    "artificial intelligence/Machine Learning.md",
+    "Pasted image 20261001163011.png",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 2 - Principal Component Analysis.md",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 1 - Basics of Linear Algebra.md",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Statistical and Mathematical Methods for Artificial Intelligence.canvas",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Detailed Course Syllabus.md",
+    "Pasted image 20260930142340.png",
+    "img/Pasted image 20260928130405.png",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Non-informed Search Strategies.md",
+    "Pasted image 20260930123013.png",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
+    "genomics/Principles of Biochemistry and Metabolomics",
+    "genomics",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/TRANSFORMATION INTO CLAUSES.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/First Order Logic.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Mining.md",
-    "Pasted image 20260928130405.png",
     "artificial intelligence/Machine Learning and Deep learning/Data Lakes.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
-    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
     "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
-    "Pasted image 20260928125244.png",
-    "Pasted image 20260928125207.png",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Introduction to uncertainty and probabilistic reasoning.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Independence.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Non-informed Search Strategies.md",
-    "Pasted image 20260928103242.png",
-    "Pasted image 20260928102403.png",
-    "Pasted image 20260928102107.png",
-    "Pasted image 20260928095835.png",
-    "Pasted image 20260928092525.png",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Artificial Intelligence Applications.md",
-    "desktop.ini",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Regression.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Clustering.md",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Objects in Python.md",
-    "Pasted image 20260916135444.png",
-    "Pasted image 20260916135423.png",
-    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 1 - Basics of Linear Algebra.md",
     "img",
     "organize_imgs.py",
-    "artificial intelligence/Machine Learning.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Classification.md",
     "artificial intelligence/Artificial Intelligence.canvas",
-    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Detailed Course Syllabus.md",
     "personal-git-ignore",
-    "artificial intelligence/Artificial Intelligence.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation",
-    "Senza nome.base",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning",
-    "Module 1 -- Basics of Linear Algebra.md",
-    "README.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation",
-    "artificial intelligence/Machine Learning and Deep learning",
-    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence"
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation"
   ]
 }

@@ -723,7 +723,7 @@ must have a **nontrivial solution**:
 So the general hand-computation procedure is:
 1. form $\mathbf{A}-\lambda \mathbf{I}$;
 2. compute $\det(\mathbf{A}-\lambda \mathbf{I})$;
-3. solve the polynomial equation $\det(\mathbf{A}-\lambda \mathbf{I}) = 0$.
+3. solve the polynomial equation $\det(\mathbf{A}-\lambda \mathbf{I}) = 0$. ==!!==
 
 Once an eigenvalue $\lambda$ is known, substitute it back into
 
@@ -897,7 +897,7 @@ $$
 \frac{\partial f}{\partial x_2} = x_1^2 + 6x_2.
 $$
 
-For a scalar-valued function $f : \mathbb{R}^p \to \mathbb{R}$, the **gradient** is the column vector of partial derivatives:
+For a scalar-valued function $f : \mathbb{R}^p \to \mathbb{R}$, the **gradient** is the ==column vector== of partial derivatives:
 
 $$
 \nabla f(\mathbf{x}) =

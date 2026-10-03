@@ -73,4 +73,18 @@ Representation is implicitly distributed in different layers.
 No labels are needed, the feature are extracted by network during the **unsupervised learning**. These features are unknown due to the **black-box** nature of DL architectures. 
 The following phase is the **fine tuning**, where performances are improved with a hybrid learning method that is both supervised and unsupervised.
 
+---
+# Machine Learning Lifecycle
+
+1. **Problem Definition**
+2. **Data Collection**
+3. **Data Cleaning & Pre-processing**
+4. **[[Exploratory Data Analysis]]**
+5. **Feature Engineering & Selection**
+6. **Model Selection**
+7. **Model Training**
+8. **Model Evaluation and Tuning**
+9. **Model Deployment**
+10. **Model Monitoring & Maintenance**
+
 

@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"9db0a77cb9710d51","type":"file","file":"artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 1 - Basics of Linear Algebra.md","x":2,"y":0,"width":400,"height":400},
+		{"id":"71c3f5e69fbfff4c","x":520,"y":0,"width":400,"height":400,"type":"file","file":"artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 2 - Principal Component Analysis.md"}
+	],
+	"edges":[]
+}
