@@ -39,7 +39,7 @@ There is no direct connection between Python data and machine representation (it
 $$x \rightarrow obj \rightarrow (val, type, id)$$
 "x" is a name bound to an object, which has a value, a type, and an ID. This relation is called "state" of an object.
 
->[!definition] Object
+>[!definition] [[#Objects|Object]]
 >An object is a value enveloped in an identity.
 >This identity is unique during a run of the Python machine.
 
@@ -479,3 +479,83 @@ It returns the value of `expression` and suspends the evaluation of the function
 - Calling the generator's name returns the generator's **object** (the body is **not** evaluated yet).
 - Calls to the function `next(G)` cause the execution of the body of the generator, until `yield` is found.
 - `yield` suspends the execution of the body and returns the value of the `expression` ad value of the call to `next(G)`.
+
+---
+# Objects
+An **object** is a value encapsulated into an *identity*.
+
+>[!warning] **Class**
+>It's a collection of objects which share:
+>- structure
+>- operations
+>- methods
+
+For example:
+```
+class Point: 
+	def __init__(self): 
+		self.x=0 
+		self.y=0 
+	
+	def whoareyou(self): 
+		return self.x, self.y 
+		
+	def move(self, delta): 
+		self.x+=delta 
+		self.y+=delta
+```
+
+To create **instances** of a class we use the **name of the class as a function**.
+```
+p = Point()
+```
+The structure of the instance that is returned is defined by the method `__init__`.
+
+>By convention, for the first parameter we use `self`.
+>`self` must be used to access the attributes of the instance.
+
+>[!info] **Magic methods**
+>"Dunder":  `__`
+>Methods in this form are "magic methods", by convention reserved for special purposes by the Python machine.
+>
+>- `__init__`.
+>- `__add__`, `__sub__`, `__mul__` called by `+`, `-` and `*` respectively.
+>- `__floordiv__` and `__truediv__` called by `//` and `/` respectively.
+>- `__pow__` called by `**`.
+>- `__str__` called by `print()`.
+>- `__repr__` is used internally by the interpreter to represent the value.
+>- `__eq__` called by `==`.
+>- `__ne__` called by `!=`.
+>- `__lt__` called by `<`.
+>- `__gt__` called by `>`.
+>- `__le__` called by `<=`.
+>- `__ge__` called by `>=`.
+>- $...$
+>  
+>  There are also magic methods for in-place operations.
+>  All of these methods can be overridden.
+
+Boolean operations (and, or, not) cannot be redefined through special dunder methods `__xxx__` (because of the lazy evaluation, so hardwired in the python machine).
+
+### Class attributes $vs$ Instance attributes
+All instances of a class share an attribute modifications to the attribute are immediately shared by all instances.
+
+>[!info] Class attributes
+>Are static attributes, accessed by **dot notation**, using the class name.
+>They belong to the class itself.
+
+>[!Instance attributes]
+>Are variables that  are unique and belong to a specific object and are only accessible within the object.
+>These attributes are **not** shared between instances.
+
+
+>[!danger] Do not use mutable objects as default arguments
+
+---
+
+# Inheritance and sub-classes
+We want to define a new class with the same data as a previous class `A`, but more operations.
+$\implies$ we must **extend** `A`.
+
+For example, we create a new class `NewPoint` such that *any instance of `NewPoint` is an instance of `Point`*.
+
