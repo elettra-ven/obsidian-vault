@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "139a593ea86f375f",
+        "id": "e4f705d612d74088",
         "type": "tabs",
         "children": [
           {
-            "id": "3f53bb416a03899f",
+            "id": "88c255c6c8771d67",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
+                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Local Search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Glycolysis"
-            }
-          },
-          {
-            "id": "df8d56557d988794",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Informed Search Strategies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Informed Search Strategies"
+              "title": "Local Search"
             }
           }
         ]
@@ -94,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "8be6c960a1d6b93d",
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
+                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Local Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
+                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Local Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -200,57 +187,56 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "3f53bb416a03899f",
+  "active": "88c255c6c8771d67",
   "lastOpenFiles": [
-    "genomics/Principles of Biochemistry and Metabolomics/Metabolism.md",
-    "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
-    "genomics/Principles of Biochemistry and Metabolomics/Chemical reactions in cells.md",
-    "Pasted image 20261003110946.png",
-    "Pasted image 20261003104151.png",
-    "Senza nome.base",
-    "Pasted image 20261002141854.png",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Informed Search Strategies.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
+    "img/Pasted image 20261003110946.png",
+    "img/Pasted image 20261008092601.png",
+    "img/Pasted image 20261008093101.png",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Local Search.md",
+    "img/Pasted image 20261003104151.png",
+    "img/Pasted image 20261002141854.png",
+    "img/Pasted image 20261002112207.png",
+    "img/Pasted image 20261002104537.png",
+    "img/Pasted image 20261002102703.png",
+    "img/Pasted image 20261001163011.png",
+    "img/Pasted image 20260930111135.png",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/desktop.ini",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Accessing Scopes.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Non-informed Search Strategies.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md",
+    "genomics/Principles of Biochemistry and Metabolomics/Glycolysis.md",
+    "genomics/Principles of Biochemistry and Metabolomics/Metabolism.md",
+    "genomics/Principles of Biochemistry and Metabolomics/Chemical reactions in cells.md",
+    "Senza nome.base",
     "artificial intelligence/Machine Learning and Deep learning/Exploratory Data Analysis.md",
     "Senza nome.md",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Accessing Scopes.md",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Comprehension.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Artificial Intelligence Applications.md",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Objects in Python.md",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/Unbounded iterations.md",
-    "Pasted image 20261002112207.png",
     "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
-    "Pasted image 20261002104537.png",
-    "Pasted image 20261002102703.png",
     "desktop.ini",
     "artificial intelligence/Machine Learning.md",
-    "Pasted image 20261001163011.png",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 2 - Principal Component Analysis.md",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 1 - Basics of Linear Algebra.md",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Statistical and Mathematical Methods for Artificial Intelligence.canvas",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Detailed Course Syllabus.md",
-    "Pasted image 20260930142340.png",
-    "img/Pasted image 20260928130405.png",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Non-informed Search Strategies.md",
-    "Pasted image 20260930123013.png",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
     "genomics/Principles of Biochemistry and Metabolomics",
     "genomics",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/TRANSFORMATION INTO CLAUSES.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/First Order Logic.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Mining.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Lakes.md",
-    "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
-    "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
     "img",
     "organize_imgs.py",
     "artificial intelligence/Artificial Intelligence.canvas",
     "personal-git-ignore",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation"
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning"
   ]
 }

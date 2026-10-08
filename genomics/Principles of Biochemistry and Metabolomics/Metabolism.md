@@ -22,7 +22,7 @@ This flow of mass is enormous ($4*10^{11}$ **metric tons** of carbon turned annu
 
 ## Cycling of nitrogen
 Gaseous nitrogen ($N_2$) makes up 80% of Earth's atmosphere.
-![[Pasted image 20260930110211.png|247]]
+![[img/Pasted image 20260930110211.png|247]]
 
 ---
 ## Catabolism and Anabolism
@@ -42,7 +42,7 @@ The presence of several steps within the pathways provides high flexibility and 
 
 >[!info] Catabolic pathways
 >These pathways **converge** in order to produce few molecules.
->![[Pasted image 20260930111135.png]]
+>![[img/Pasted image 20260930111135.png]]
 
 >[!info] Anabolic pathways
 >These pathways **diverge** in order to produce many and diverse molecules.

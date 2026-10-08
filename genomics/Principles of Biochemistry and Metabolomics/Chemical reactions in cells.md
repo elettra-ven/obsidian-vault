@@ -42,7 +42,7 @@ According to Gibbs' equation, if $K'_{eq} > 1 \longleftrightarrow \Delta G'°<0$
 
 >[!danger] **Adenosine triphosphate**
 >It's the major carrier of chemical energy in al cells. It represents 100% renewable energy:
->![[Pasted image 20261001163011.png]]
+>![[img/Pasted image 20261001163011.png]]
 
 ATP's phosphate groups are tied together by **two high energy bonds**. Breaking down these bonds releases energy.
 This process can be done by a special class of **enzymes**, **ATPase**, trough **hydrolysis** of the terminal phosphate group.
@@ -114,7 +114,7 @@ In carbon compounds, more C–H bonds (**more reduced**) equals more stored ener
 
 From most reduced (most energy) to most oxidized (least energy):
 
-![[Pasted image 20261002141854.png|519]]
+![[img/Pasted image 20261002141854.png|519]]
 
 For example:
 
@@ -218,7 +218,7 @@ Cells cannot be heated to 180 °C, so they use enzymes.
 **Example**: 
 	ATP hydrolysis is very exergonic ($\Delta$G negative) but ATP is **stable** because $E_a$ is high; it breaks fast only when an **enzyme** catalyses it.
 
-![[Pasted image 20261003104151.png|516]]
+![[img/Pasted image 20261003104151.png|516]]
 
 
 >[!important] What enzymes functions
@@ -299,7 +299,7 @@ $$V = \tfrac12 V_{max}$$
 ## Lineweaver-Burk (double reciprocal) plot
 
 Take the reciprocal of both sides to get a straight line: $$\frac{1}{V} = \frac{K_m}{V_{max}}\cdot\frac{1}{[S]} + \frac{1}{V_{max}}$$
-![[Pasted image 20261003110946.png|443]]
+![[img/Pasted image 20261003110946.png|443]]
 
 A straight line is easier to read than a curve and it makes the effect of inhibitors visually obvious.
 

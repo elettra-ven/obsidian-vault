@@ -1,7 +1,12 @@
 {
 	"nodes":[
 		{"id":"581db6eb0f59a376","type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Non-informed Search Strategies.md","x":0,"y":0,"width":400,"height":400},
-		{"id":"08343c04027999aa","x":520,"y":0,"width":400,"height":400,"type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Informed Search Strategies.md"}
+		{"id":"08343c04027999aa","type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Informed Search Strategies.md","x":520,"y":0,"width":400,"height":400},
+		{"id":"9b6a82529dcaa3e5","type":"file","file":"artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Local Search.md","x":1040,"y":0,"width":400,"height":400},
+		{"id":"9383df53121b0c36","x":0,"y":-240,"width":160,"height":60,"color":"1","type":"text","text":"**CONSTRUCTIVE ALGORITHMS**"}
 	],
-	"edges":[]
+	"edges":[
+		{"id":"7640f296f9191d4e","fromNode":"9383df53121b0c36","fromSide":"bottom","toNode":"581db6eb0f59a376","toSide":"top"},
+		{"id":"8b69b0ea54115306","fromNode":"9383df53121b0c36","fromSide":"bottom","toNode":"08343c04027999aa","toSide":"top"}
+	]
 }

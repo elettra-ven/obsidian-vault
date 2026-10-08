@@ -329,6 +329,9 @@ del L[i]
 
 Many methods/selections of lists may be done with the **slicing** function.
 
+>[!warning] Slicing function
+>`sequence[ start : stop : step ]`
+
 ```
 L=[1,2,3]
 

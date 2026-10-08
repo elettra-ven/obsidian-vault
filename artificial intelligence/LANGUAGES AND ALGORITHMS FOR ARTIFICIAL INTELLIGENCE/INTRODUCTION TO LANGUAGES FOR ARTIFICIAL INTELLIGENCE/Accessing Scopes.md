@@ -1,7 +1,7 @@
 >[!note] Scope
 >Moment in the execution where some name is available.
 
-![[Pasted image 20261002112207.png|191]]
+![[img/Pasted image 20261002112207.png|191]]
 	1. Local
 	2. Enclosing
 	3. Global

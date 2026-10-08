@@ -3,7 +3,7 @@
 >
 >This process generates **questions** and **hypotheses** that help choose the best preparation steps.
 
-![[Pasted image 20261002102703.png]]
+![[img/Pasted image 20261002102703.png]]
 
 ## Summary statistics
 
@@ -26,7 +26,7 @@ We can plot the shape of a distribution with an **histogram**, and we can chose 
 >- $2* IQR / (N^{1/3})$
 
 ### Box plots
-![[Pasted image 20261002104537.png]]
+![[img/Pasted image 20261002104537.png]]
 
 It shows how the data is spread out using **five key values**:
 1. Minimum
