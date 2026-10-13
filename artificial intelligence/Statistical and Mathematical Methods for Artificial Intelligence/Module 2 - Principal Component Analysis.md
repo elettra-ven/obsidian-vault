@@ -80,7 +80,7 @@ x_{i,1}-\bar{x}_1 \\ x_{i,2}-\bar{x}_2 \\ \vdots \\ x_{i,p}-\bar{x}_p
 >$$
 >
 >$$
->(x_i - \bar{x})(x_i - \bar{x})\top = 
+>(x_i - \bar{x})(x_i - \bar{x})^\top = 
 >\begin{bmatrix}
 (x_{i,1} - \bar{x}_1)^2 \ \ \ ... \ \ \ \\
 \vdots 
@@ -126,7 +126,13 @@ The covariance matrix summarizes how the variables vary and covary:
 - **Positive semidefiniteness:** For every vector $a \in \mathbb{R}^p$, $a^\top S a \ge 0$.
 - **Rank bound:** If $X \in \mathbb{R}^{n \times p}$, then $\operatorname{rank}(S) = \operatorname{rank}(X^\top X) \le \min(p, n)$. Because centering imposes one linear constraint on the rows, the sharper bound for centered data is $\min(p, n-1)$.
 
-Positive semidefiniteness is crucial because it implies that the eigenvalues of $S$ are nonnegative.
+>[!info] Centered data
+>It refers to ==a statistical and machine learning transformation where the average (**mean**) value of a variable is subtracted from every individual data point in the set==.
+
+Positive semidefiniteness is crucial because it implies that the eigenvalues of $S$ are **nonnegative** (which is very important from a statistical point of view).
+
+>[!abstract] Note on **eigenvalues**
+>Eigenvalues are obtained through Spectral/Eigen Matrix Decomposition.
 
 When $n \ll p$, the covariance matrix is low rank. This situation is called a **high-dimensional setting** and requires special treatment.
 
@@ -134,28 +140,86 @@ When $n \ll p$, the covariance matrix is low rank. This situation is called a **
 
 ## 2.3 Link With Linear Algebra
 
-PCA is one of the main applications of the linear algebra developed in Module 1. In particular, the following facts are fundamental:
+PCA is one of the main applications of the linear algebra developed in [[Module 1 - Basics of Linear Algebra|Module 1]]. In particular, the following facts are fundamental:
 
 - the covariance matrix $S$ is symmetric positive semidefinite;
-- its eigenvectors form an orthonormal basis of principal directions;
-- the matrix $P_q P_q^\top$ is the orthogonal projector onto the principal subspace; and
-- the reconstruction $\hat{X} = X P_q P_q^\top$ is therefore the orthogonal projection of the data onto that subspace.
+- its eigenvectors form an **orthonormal basis** of principal directions;
+- the matrix $P_q P_q^\top$ is the orthogonal **projector** onto the principal subspace; and the reconstruction $\hat{X} = X P_q P_q^\top$ is therefore the orthogonal projection of the data onto that subspace.
 
 So PCA is not only a statistical method: it is also a concrete application of spectral decomposition, orthogonal projection, and low-rank approximation.
+
+$$S:\text{Covariance Matrix (Empirical)}$$
+$$\begin{split}
+& S=P\Lambda P^\top.\\
+& P = [p_1,...,p_p] = p_j  \ \ \ \ \ \ \ \ \ j=1,...,p\\
+& P_2 = [p_1,p_2]
+\end{split}$$
+$$\hat{X}_2 = XP_2P_2^\top = X \begin{bmatrix} p_1 p_2 \end{bmatrix} \begin{bmatrix} p_1 \\ p_2 \end{bmatrix}$$
+The dimension of the result is $n\times p$.
+
+>[!tip] If the projection is near $X$, that means that $P_q$ contains most of the information about $X$.
+>$\implies$ we want to find the **projection** that summarizes best the data in X.
+
+The **larger the covariance** is, the more likely we are to reduce the distance between the projection and the data.
 
 > [!question] Suggested Exercise 22.
 
 ## 2.4 Maximum Variance Principle
 
-The main objective of PCA is to find a low-dimensional subspace such that the projected data have maximum variance. Indeed, if the projected points still spread out substantially, then the projection retains information. If the projected points collapse into a small subspace, then much structure has been removed.
+The main objective of **PCA** is to find a low-dimensional subspace such that the projected data have **maximum variance**. Indeed, if the projected points still spread out substantially, then the projection retains information. If the projected points collapse into a small subspace, then much structure has been removed.
 
-Let $S$ be the covariance matrix of centered data. Let $z_i = p^\top x_i$ be the latent score. If $p \in \mathbb{R}^p$ is an eigenvector, then the variance of the latent scores is
+Let $S$ be the covariance matrix of centered data. Let $z_i = p^\top x_i$ be the latent score. If $p \in \mathbb{R}^p$ is an eigenvector, then the variance of the latent scores is:
 
 $$
 \operatorname{var}(z) = p^\top S p \quad \text{subject to} \quad p^\top p = 1.
 $$
+>[!note] **Score**
+>$$z_i = p^\top x_i$$
+>$$x_i = \begin{bmatrix} x_1^\top \\ \vdots \\x_n^\top \end{bmatrix}$$
+>$$z_i \text{ is a scalar and it's called } \mathbf{score}.$$
 
-Note that the constraint $p^\top p = 1$ ensures $p$ is an orthonormal eigenvector. Without this constraint, the problem has no finite maximum. Indeed, for any scalar $c \in \mathbb{R}$, the variance would be
+>[!warning] Show that $\operatorname{var}(z) = p^\top S p$
+>By definition:
+>$$\operatorname{var}(z) = \frac{1}{n} \sum_{i=1}^n (z_i,-\bar{z})^2$$
+>The dimension of $x_i$  and $\bar{x}$ (average of the first measurements) are vectors of dimension $p$.
+>$$S = P\Lambda P^\top$$
+>where $P = [p_1,...,p_p]$ is of dimension $p\times 1$.
+>The **score** $z_i$ (calculated as $z_i = p^\top x_i$) is a scalar.
+>The **variance** is also a scalar.
+>
+>----
+>
+>$$\bar{z} = \frac{1}{n}\sum_{i=1}^n z_i$$
+>We calculate $z_i$:
+>$$z_i =  p^\top x_i = \begin{bmatrix}p_1,...,p_p\end{bmatrix}
+>\begin{bmatrix}
+>\hat{x}_i1 \\
+>\vdots\\
+>\hat{x}_ip
+>\end{bmatrix} = \sum^p_{j=1} p_j\hat{x}_{ij}$$
+>$$z_i = \sum^p_{j=1} (x_{ij}-\hat{x}_j)p_j$$
+>Therefore:
+>$$\implies \bar{z} = \frac{1}{n}\sum_{i=1}^n \sum^p_{j=1} (x_{ij}-\hat{x}_j)p_j$$
+>$$\implies \bar{z} = \sum^p_{j=1}p_j [\frac{1}{n}\sum_{i=1}^n(x_{ij}-\hat{x}_j)]$$
+>The following element of the equation equals to $0$:
+>$$[\frac{1}{n}\sum_{i=1}^n(x_{ij}-\hat{x}_j)]$$
+>$$\frac{1}{n}\sum_{i=1}^n x_{ij} - \frac{1}{n}\sum_{i=1}^n \hat{x}_j = \bar{x}_j-\bar{x}_j= 0$$
+>By definition.
+>Therefore $\bar{z} = 0$.
+>
+>$$\begin{split}
+>var(z) & = \frac{1}{n}\sum_{i=1}^n z_i^2 \\
+>& = \frac{1}{n}\sum_{i=1}^n (p^\top \hat{x}_i)^2 \\
+>& = \frac{1}{n}\sum_{i=1}^n (p^\top \hat{x}_i) (\hat{x}_i^\top p) \\
+>& = p^\top (\frac{1}{n}\sum_{i=1}^n  \hat{x}_i \hat{x}_i^\top) p \\
+>& = p^\top S p
+>\end{split}$$
+>
+>Since $S = (\frac{1}{n}\sum_{i=1}^n  \hat{x}_i \hat{x}_i^\top)$.
+
+Note that the constraint $p^\top p = 1$ ensures $p$ is an orthonormal eigenvector. 
+**Without this constraint, the problem has no finite maximum**. 
+Indeed, for any scalar $c \in \mathbb{R}$, the variance would be
 
 $$
 \operatorname{var}(cz) = (cp)^\top S (cp) = c^2 \, p^\top S p.
@@ -244,6 +308,8 @@ ggplot(df, aes(x = x1, y = x2)) +
   labs(title = "Toy dataset in two dimensions") +
   theme_minimal()
 ```
+![[img/Pasted image 20261013154658.png|662]]
+Each point represents a **line of the matrix $X$**, a **subject**.
 
 ### 2.5.1 Interpretation
 
@@ -335,7 +401,7 @@ ggplot(df, aes(x = x1, y = x2)) +
   labs(title = "Principal directions from the covariance matrix") +
   theme_minimal()
 ```
-
+![[img/Pasted image 20261013154936.png]]
 ### 2.5.4 Interpretation
 
 The starting point of both arrows is the empirical mean:
@@ -423,6 +489,8 @@ ggplot(recon_df) +
   ) +
   theme_minimal()
 ```
+![[img/Pasted image 20261013154958.png|651]]
+Each point are **projected** into the regression line. Therefore, the distance between the projection and the line must me **minimised** in order to obtain more accurate information about the distribution.
 
 ### 2.5.7 Interpretation
 

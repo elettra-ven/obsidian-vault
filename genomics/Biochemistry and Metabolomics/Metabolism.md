@@ -1,7 +1,3 @@
-**Professor**: [annamaria.ghelli@unibo.it](mailto:annamaria.ghelli@unibo.it)
-
----
-
 >The word metabolism comes from the Greek ***metabolé*** and means change or transformation.
 
 Living organisms can either be classified as **autotrophs** or **heterotrophs**. 

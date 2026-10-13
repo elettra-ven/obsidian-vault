@@ -269,6 +269,21 @@ while i < len(s):
 
 The unbounded iteration does not "freeze" neither `s` nor its length.
 
+>[!warning] Using `while` for reading input until a "sentinel"
+>Example from LAB:
+>```
+>total = 0 
+>count = 0 
+>while True: 
+>	r = int(input("R:")) 
+>	if r == 99999: 
+>		break 
+>	if r >= 0: 
+>		total += r 
+>		count += 1 
+>if count > 0: 
+>	print(round(total / count, 2))
+>```
 ### Tuples
 It's an immutable sequence of objects, that groups different values, each of them of arbitrary type.
 `for` can also be used to **scan** a tuple or a sequence index by index.
@@ -558,4 +573,69 @@ We want to define a new class with the same data as a previous class `A`, but mo
 $\implies$ we must **extend** `A`.
 
 For example, we create a new class `NewPoint` such that *any instance of `NewPoint` is an instance of `Point`*.
+We can say that `NewPoint` is a **subclass**.
 
+
+---
+# Exceptions
+
+```
+try: 
+	<block>
+except <exception>:
+	<handlerblock>
+<after>
+```
+
+>[!warning] Asking user for a valid input
+>```
+>while True:
+> 	try:
+> 		age = int(input("Please enter your age: "))
+> 	except ValueError:
+> 		print("Sorry, I didn't understand that.")
+> 	#better try again... Return to the start of the loop
+> 		continue
+> 	else:
+> 		#age was successfully parsed!
+> 		#we're ready to exit the loop.
+> 		break
+> if age >= 18: 
+> 	print("You are able to vote in the United States!")
+>else:
+>	print("You are not able to vote in the United States.")
+>```
+>
+>Or we can simulate a "`do...while`" with `x = None` and then the `while` cycle.
+
+```
+try: 
+	<block> 
+except name1: 
+	<block>
+. . . 
+else: 
+	<block>
+finally:
+	<finalblock>
+```
+
+`<finalblock>` is executed in any case, as final code before leaving the **try**, either if exceptions are or are not raised, or are handled or non handled.
+
+## Exceptions and the frame stack
+Exceptions are **propagated** through the stack. 
+Frames are **popped out** of the stack if their function does not handle the exception. The code remaining in those functions is not executed.
+If an exception is never caught, the exception is passed to the standard exception handler of the main: 
+	the program terminates and the exception is printed.
+
+>[!idea] It's like a break in a series of nested cycles.
+
+## Hierarchies of user defined exceptions
+An *except* clause will catch all exceptions of the specified instance, **therefore all instances of its subclasses**.
+
+We can define exceptions:
+```
+class MyExcp(Exception): pass 
+class MySpec1(MyExcp): pass 
+class MySpec2(MyExcp): pass
+```

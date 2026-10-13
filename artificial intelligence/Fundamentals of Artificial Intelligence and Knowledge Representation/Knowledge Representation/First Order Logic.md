@@ -35,7 +35,7 @@ For this purpose, we temporally change the goal to *decide if, **given some form
 
 ![[img/Pasted image 20260921113635.png|502]]
 
-This syntactic procedure is able to deduce the formulas from a formal problem (resolution). 
+This **syntactic** procedure is able to deduce the formulas from a formal problem (resolution). 
 ### Reasoning
 It's a method that deals with symbols in order to decide if a specific formula-goal $G$ is valid.
 
@@ -54,7 +54,6 @@ There are different methods of reasoning:
 >$F_1 \wedge ... \wedge F_n \models G$ if and only if $\models (F_1 \wedge ... \wedge F_n) \rightarrow G$
 
 We can prove the logical consequence of G by proving the validity of $(F_1 \wedge ... \wedge F_n) \rightarrow G$.
-
 
 >[!important] Theorem of Reasoning by Refutations
 >Given a set of formulas  $\{F_1, ... , F_n\}$ and a formula $G$, 
@@ -119,11 +118,14 @@ The original formula G is logical consequence of the KB.
 ---
 
 >[!note] Horn Clauses
->They have at most one positive literal.
+>==They have at most one positive literal.==
+>Is a subset of FOL **general** clauses.
 
 A **literal** is an atom or its negation.
 
 Horn Clauses are equivalent to $A \leftarrow B_1, ..., B_n$.
+### Resolution for Horn clauses: SLD resolution 
+Resolution with **S**election rule, **L**inear input strategy for **D**efinite clauses.
 
 # FOL (First Order Logic)
 
@@ -181,3 +183,13 @@ They are **recursively** defined as:
 8. $c$  $\leftarrow$ **(2. + 4.)**
 9. $c$  $\leftarrow$ **(3. + 4.)**
 10.  ==**We reached a contradiction/inconsistency**==  $\leftarrow$ **(8. + 9.)**
+
+---
+## Soundness and Completeness
+
+>[!tip] **Theorem** of soundness and completeness of resolution
+>A set of clauses is unsatisfiable if and only if the resolution algorithm terminates successfully in a finite number of steps, generating the empty clause. 
+>The resolution method proceeds exhaustively, generating all possible resolvents at each step.
+
+
+![[img/Pasted image 20261012122024.png|528]]

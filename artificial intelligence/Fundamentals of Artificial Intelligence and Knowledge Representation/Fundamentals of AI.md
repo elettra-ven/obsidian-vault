@@ -33,7 +33,7 @@ General AI copes with generalised tasks much like a human, while Narrow AI refer
 	- concepts learned by examples
 	- not understandable by humans
 
-## PROLOG (PROgramming in LOGic)
+## [[PROLOG]] (PROgramming in LOGic)
 Declarative programming language.
 A **PROLOG Program** is a set of clauses representing **facts**, **rules** and **goals**:
 

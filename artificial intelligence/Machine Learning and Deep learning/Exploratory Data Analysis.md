@@ -10,6 +10,8 @@ Data can be of various kinds:
 - **Graph** data
 - **Ordered** data
 - $...$
+  
+
 ## Summary statistics
 
 >[!note] Location: **mean**, **median**.

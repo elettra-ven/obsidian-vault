@@ -43,11 +43,11 @@ $$P(H,E_1,...,E_n) = P(H) \prod_{i=1}^n(E_i \mid H)$$
 If $H$ has $k$ values and each observation has at most $r$ values, the model requires $(k-1)+nk(r-1)$ free parameters ($o(n)$).
 
 # Bayesian network representation
-A Bayesian network represents a joint probability distribution compactly by combining a directed graph with local conditional probability distributions. The graph makes conditional-independence assumptions explicit and determines how the full joint distribution factorizes.
+A [[Constructing Bayesian networks|Bayesian network]] represents a joint probability distribution compactly by combining a directed graph with local conditional probability distributions. The graph makes conditional-independence assumptions explicit and determines how the full joint distribution factorizes.
 
 >[!info] Bayesian network
 >For a set of random variable ($X_1,...X_n$) is made of **one node for each variable**.
->The network can be represented ad a **directed acyclic graph**.
+>The network can be represented ad a **directed acyclic graph** (the edges have directions and it's impossible to come back to a certain node following the directions of the arrows).
 >
 >Each node has **one local conditional probability** distribution given the knowledge of the parent:
 >$$P(X_i \mid \text{Parents}(X_i))$$
@@ -75,6 +75,7 @@ Revises one possible explanation after observing the outcome and another possibl
 
 >[!info] Compactness
 >A **CPT** for Boolean $X_i$ with $k$ Boolean parents has 2 $k$ rows for the combinations of parent values Each row requires one number p for $X_i = \text{true}$ (the number for $X_i = \text{false}$ is just $1 − p$).
+>
 >![[img/Pasted image 20260928102107.png]]
 
 >[!warning] Global semantics of a Bayesian network
@@ -91,11 +92,12 @@ Revises one possible explanation after observing the outcome and another possibl
 - $P \models (I \perp ...?)$ 
 - $P \models (D \perp ...?)$ 
 #### Solutions:
-- $P \models (L \perp ...?)$ 
-- $P \models (S \perp ...?)$ 
-- $P \models (G \perp ...?)$ 
-- $P \models (I \perp ...?)$ 
-- $P \models (D \perp ...?)$ 
+- $P \models (L \perp I, D, S\mid G)$ 
+- $P \models (S \perp G, D, L\mid I)$ 
+- $P \models (G \perp S \mid I)$ 
+- $P \models (I \perp D)$ 
+- $P \models (D \perp I, S)$ 
+- $...$
 
 >[!info] Flow influence
 >How does X influence Y ?
@@ -123,6 +125,10 @@ An **active trail** is a path obtained by following connected nodes, **regardles
 > - if $X_{i-1} \rightarrow X_i \leftarrow X_{i+1}$, the $X_i$ (or one of its children) $\in Z$ 
 > - otherwise, $X_i \notin Z$
 
+Every intermediate node on the trail is either a **collider** or a **non-collider**:
+- If it is a **collider** then the node, or one of its descendants, must be observed in order to open a trail.
+- If it is a **non-collider**, observing it blocks the trail
+
 ### D-separation 
 Two sets of nodes $X, Y$ are d-separated given $Z$ if there is no active trail between any $X \in X$ and $Y \in Y$ given $Z$.
 
@@ -132,3 +138,55 @@ For every probability distribution represented by the Bayesian network, if $X$ a
 >1. Traverse the graph bottom-up marking all nodes in $Z$ or having descendants in given $Z$. 
 >2. Traverse the graph from $X$ to $Y$ , stopping if we get to a **blocked node**.
 >3. If we can’t reach $Y$, then $X$ and $Y$ are independent.
+
+### ==🟠Guided D-separation example==
+
+![[img/Pasted image 20261012091821.png|246]]
+
+The relevant trails are:
+$$T_1 : C \leftarrow A \rightarrow D$$
+
+$$T_2 : C \leftarrow B \rightarrow D$$
+
+$$T_3 : C \rightarrow E \rightarrow F \rightarrow D$$
+
+#### **Step 1.**
+$$C\perp D \ ?$$
+$C$ and $D$ are **not independent**.
+The trails through $A$ and $B$ are active. 
+The collider trail through $F$ remains blocked because neither $F$ nor one of its descendants is observed.
+
+#### **Step 2.**
+$$C\perp D \mid A \ ?$$
+Observing the non-collider $A$ **blocks** $T_1$. 
+However, $T_2$, through the unobserved common cause $B$, is still **active**.
+
+#### **Step 3.**
+$$C\perp D \mid A \mid B\ ?$$
+Observing $A$ and $B$ blocks both common-cause trails. 
+The remaining trail is still blocked at the unobserved collider $F$.
+
+#### **Step 4.**
+$$C\perp D \mid A, B, J ?$$
+$C$ and $D$ are **not independent**.
+$J$ is a descendant of the collider $F$. 
+Observing $J$ opens the collider trail $T_3$.
+
+#### **Step 5.**
+$$C\perp D \mid A, B, E, J ?$$
+$C$ and $D$ are **independent**.
+Observing $J$ opens the collider at $F$, but observing $E$, a non-collider on that trail, blocks it again. 
+All trails between $C$ and $D$ are now blocked.
+
+
+>[!important] **Local Semantics**
+>For every node $X$, once its parents are observed, $X$ is conditionally independent for all its non-descendants that are not parents:
+>$$X \perp (\text{NonDescendants(X)}\textbackslash \text{Parents(X)}) \mid \text{Parents(X)}$$
+>
+>To assess how likely a node is, it is sufficient to know the values of its direct parents. 
+>Once they are known, learning about any other non-descendant provides no additional information.
+
+>[!waring] Theorem
+>For a Bayesian network, the local Markov property is equivalent to the global factorization of the joint probability distribution:
+>$$\text{local semantics} \Longleftrightarrow \text{global semantics}$$
+

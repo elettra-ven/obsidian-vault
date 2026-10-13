@@ -87,7 +87,7 @@ and with $\mathbf{C}\in \mathbb{R}^{m \times n}$
 $$
 (\mathbf{AC})^\top = \mathbf{C}^\top \mathbf{A}^\top.
 $$
-**Suggested Exercises 1 and 2.**
+>[!question] Suggested Exercises 1 and 2.
 
 ## Multiplication
 
@@ -107,7 +107,7 @@ Properties for matrices of suitable dimensions:
 - $(\mathbf{A}+\mathbf{C})\mathbf{B}=\mathbf{AB}+\mathbf{CB}$, 
 - in general, $\mathbf{AB} \neq \mathbf{BA}$.
 
-**Suggested Exercise 3.**
+>[!question] Suggested Exercise 3.
 
 ## Scalar Multiplication
 
@@ -206,7 +206,7 @@ Key properties:
 
 >[!NOTE] A square matrix is **singular** if and only if its determinant is zero.
 
-==**Suggested Exercise 4.**==
+>[!question] Suggested Exercise 4.
 
 ---
 # Matrix Operations
@@ -233,7 +233,7 @@ Each row of $\mathbf{A}$ represents one equation, and each column contains the c
 
 Solving the system means finding all vectors $\mathbf{x}$ that satisfy every equation simultaneously. Depending on $\mathbf{A}$ and $\mathbf{b}$, a linear system may have no solution, exactly one solution, or infinitely many solutions. Matrix operations such as inversion, rank computation, and matrix decomposition help us determine which case occurs and, when solutions exist, compute them efficiently.
 
-**Suggested Exercise 5.**
+>[!question] Suggested Exercise 5.
 
 ## Inverse Matrix
 
@@ -277,7 +277,7 @@ $$
 
 >[!WARNING] A **singular** matrix has no solution, since its determinant is 0 and can't be a denominator. 
 
-**Suggested Exercise 6.**
+>[!question] Suggested Exercise 6.
 
 ## Diagonal and Trace of a Matrix
 
@@ -295,7 +295,7 @@ Basic properties with $\mathbf{A},\,\mathbf{B}\in\mathbb{R}^{n\times n}$:
 - $\operatorname{tr}(\alpha\mathbf{A}) = \alpha\operatorname{tr}(\mathbf{A})$,
 - $\operatorname{tr}(\mathbf{AB}) = \operatorname{tr}(\mathbf{BA})$ when both products are defined.
 
-**Suggested Exercise 7.**
+>[!question]  Suggested Exercise 7.
 
 ## Partitioned Matrices
 
@@ -509,7 +509,7 @@ $$
 
 This norm measures the largest absolute component of the vector.
 
-**Suggested Exercises 8 and 9.**
+>[!question] Suggested Exercises 8 and 9.
 
 ## Distances
 
@@ -552,7 +552,7 @@ $$
 
 So the length of a vector is a special case of distance.
 
-**Suggested Exercise 10.**
+>[!question] Suggested Exercise 10.
 
 ---
 # Matrix Decompositions
@@ -580,7 +580,7 @@ where $\mathbf{L}$ is a **lower-triangular matrix** with positive diagonal entri
 
 ==This factorization can be viewed as a matrix analogue of taking a square root.==
 
-**Suggested Exercise 11.**
+>[!question] Suggested Exercise 11.
 
 For diagonal matrices
 
@@ -602,7 +602,7 @@ $$
 \end{bmatrix}.
 $$
 
-**Suggested Exercise 12.**
+>[!question] Suggested Exercise 12.
 
 ### Solving systems using Cholesky factors
 
@@ -639,7 +639,7 @@ can be done in two triangular steps:
 
 This is numerically attractive because triangular systems are easy to solve.
 
-**Suggested Exercise 13.**
+>[!question] Suggested Exercise 13.
 
 ## Spectral Decomposition
 
@@ -680,7 +680,7 @@ $$
 \mathbf{A}=\mathbf{P}\mathbf{\Lambda}\mathbf{P}^\top.
 $$
 
-**Suggested Exercise 14.**
+>[!question] Suggested Exercise 14.
 
 ---
 ### How to Compute Eigenvalues and Eigenvectors
@@ -736,7 +736,7 @@ $$\mathbf{A}\mathbf{x} = \lambda\mathbf{x}$$
 
 and solve the resulting homogeneous system. Any nonzero solution is an eigenvector associated with $\lambda$.
 
-**Suggested Exercise 15.**
+>[!question] Suggested Exercise 15.
 
 ### Additional Properties
 
@@ -778,7 +778,7 @@ $$
 \mathbf{\Lambda} = \mathbf{P}^\top \mathbf{A}\mathbf{P}.
 $$
 
-**Suggested Exercise 16.**
+>[!question] Suggested Exercise 16.
 
 
 ## Singular Value Decomposition
@@ -910,7 +910,7 @@ $$
 
 The gradient points in the direction of steepest increase of $f$.
 
-**Suggested Exercise 17.**
+>[!question] Suggested Exercise 17.
 
 ### Useful Results
 
@@ -1020,7 +1020,7 @@ $$
 \end{bmatrix}.
 $$
 
-**Suggested Exercises 18 and 19.**
+>[!question] Suggested Exercises 18 and 19.
 
 ### Hessian Matrix
 
@@ -1035,7 +1035,7 @@ $$
 \end{bmatrix}.
 $$
 
-**Suggested Exercise 20.**
+>[!question] Suggested Exercise 20.
 
 
 
