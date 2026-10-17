@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 2 - Principal Component Analysis.md",
+                "file": "Bioinformatics/Biologia Molecolare/Topologia del DNA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Module 2 - Principal Component Analysis"
+              "title": "Topologia del DNA"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+                "file": "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Swarm Intelligence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE"
+              "title": "Swarm Intelligence"
             }
           },
           {
@@ -109,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "8be6c960a1d6b93d",
@@ -218,11 +217,17 @@
   },
   "active": "3ff18bd33f95c168",
   "lastOpenFiles": [
+    "img/Pasted image 20261015095005.png",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Swarm Intelligence.md",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Statistical and Mathematical Methods for Artificial Intelligence.canvas",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+    "Bioinformatics/Biologia Molecolare/Topologia del DNA.md",
+    "Topoisomerasi.md",
+    "Bioinformatics/Biologia Molecolare/Struttura di DNA e RNA.md",
+    "Bioinformatics/Biologia Molecolare",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 2 - Principal Component Analysis.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Classification.md",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
     "img/Pasted image 20261015095137.png",
-    "img/Pasted image 20261015095005.png",
     "img/Pasted image 20261015094502.png",
     "img/Pasted image 20261014132043.png",
     "img/Pasted image 20261014131937.png",
@@ -231,7 +236,6 @@
     "img/Pasted image 20261014130231.png",
     "img/Pasted image 20261014125717.png",
     "img/Pasted image 20261014124524.png",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Swarm Intelligence.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Local Search.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Mining.md",
@@ -241,7 +245,6 @@
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 1 - Basics of Linear Algebra.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/PROLOG.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Constructing Bayesian networks.md",
-    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Statistical and Mathematical Methods for Artificial Intelligence.canvas",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Fundamentals of AI.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/First Order Logic.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
@@ -249,23 +252,19 @@
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Introduction to uncertainty and probabilistic reasoning.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Informed Search Strategies.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Independence.md",
-    "genomics/Biochemistry and Metabolomics/Metabolism.md",
-    "genomics/Biochemistry and Metabolomics/Glycolysis.md",
-    "genomics/Biochemistry and Metabolomics/Chemical reactions in cells.md",
-    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
-    "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
-    "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
+    "Bioinformatics/Biochemistry and Metabolomics/Metabolism.md",
+    "Bioinformatics/Biochemistry and Metabolomics/Glycolysis.md",
+    "Bioinformatics/Biochemistry and Metabolomics/Chemical reactions in cells.md",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/desktop.ini",
     "Senza nome.base",
     "desktop.ini",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
-    "genomics/Biochemistry and Metabolomics",
-    "genomics",
+    "Bioinformatics/Biochemistry and Metabolomics",
+    "Bioinformatics",
     "img",
     "organize_imgs.py",
     "artificial intelligence/Artificial Intelligence.canvas",
     "personal-git-ignore",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning"
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation"
   ]
 }
