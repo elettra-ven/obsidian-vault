@@ -108,7 +108,7 @@ $$
 X = \begin{bmatrix} x_1^\top \\ \vdots \\ x_n^\top \end{bmatrix} \in \mathbb{R}^{n \times p},
 $$
 
-i.e. the matrix containing the $n$ observation vectors $x_i$, $i = 1, \dots, n$, by row. When the observations are centered, i.e. $\bar{x} = 0_p$, the empirical covariance matrix can be written compactly as
+i.e. the matrix containing the $n$ observation vectors $x_i$, $i = 1, \dots, n$, by row. When the observations are **centered**, i.e. $\bar{x} = 0_p$, the empirical covariance matrix can be written compactly as
 
 $$
 S = \frac{1}{n} X^\top X.
@@ -128,6 +128,7 @@ The covariance matrix summarizes how the variables vary and covary:
 
 >[!info] Centered data
 >It refers to ==a statistical and machine learning transformation where the average (**mean**) value of a variable is subtracted from every individual data point in the set==.
+>$$x_i \text{ is centered } \Longleftrightarrow \frac{1}{n} \sum_{i=1}^n x_i = 0$$
 
 Positive semidefiniteness is crucial because it implies that the eigenvalues of $S$ are **nonnegative** (which is very important from a statistical point of view).
 
@@ -234,14 +235,35 @@ Maximizing the variance of the projection leads to the optimization problem
 $$
 \max_p \; p^\top S p \quad \text{subject to} \quad p^\top p = 1.
 $$
-
-Using a Lagrange multiplier, the optimization problem leads to
+\[Note that $p$ is normalized\]
+Where we want to find the $p$ that maximises the **score**.
+Using a **Lagrange multiplier**, the optimization problem leads to:
 
 $$
 S p = \lambda p,
 $$
 
-which is an eigenvalue equation. Therefore:
+which is an eigenvalue equation. 
+
+> [!warning] Show that $S p = \lambda p$
+> Let $S$ be the (symmetric) sample covariance matrix and $p$ a unit direction, s.t. $p^\top p = 1$. 
+> The variance of the data projected onto $p$ is:
+> $$\operatorname{Var}(Xp) = p^\top S p$$
+>
+> The **goal** is to maximise this variance subject to $p^\top p = 1$.
+>
+> $$\mathcal{L}(p,\lambda) = p^\top S p - \lambda\,(p^\top p - 1)$$
+>
+>Since $S = S^\top$, $\nabla_p(p^\top S p) = 2Sp$ and $\nabla_p(p^\top p) = 2p$, so
+> $$\nabla_p \mathcal{L} = 2Sp - 2\lambda p = 0$$
+>
+> $$\boxed{S p = \lambda p}$$
+> So $p$ is an eigenvector of $S$ with eigenvalue $\lambda$.
+>
+>Left-multiplying by $p^\top$ gives $p^\top S p = \lambda\, p^\top p = \lambda$. 
+> The variance along $p$ equals $\lambda$, so the maximiser is the eigenvector with the **largest eigenvalue** (the first principal component).
+
+Therefore:
 
 - the principal directions are eigenvectors of the covariance matrix $S$;
 - the variance along each principal direction is the corresponding eigenvalue.
@@ -528,6 +550,22 @@ Suppose $P_q = [p_1, \dots, p_q]$ contains an orthonormal basis (i.e. orthonorma
 $$
 \tilde{x}_i = P_q P_q^\top x_i.
 $$
+>[!abstract] Note:
+> The system operates across **two distinct spaces**:
+> - **Data Space ($\mathbb{R}^p$):** Original feature space of dimension $p$.
+> - **Eigenvector / Latent Space ($\mathbb{R}^q$):** Reduced subspace spanned by top $q$ eigenvectors ($q < p$).
+> 
+> #### Coordinates
+> - $x_i \in \mathbb{R}^p$ — Original data point
+> - $z_i = P_q^\top x_i \in \mathbb{R}^q$ — Low-dimensional representation (coordinates in eigenvector space)
+> - $\hat{x}_i = P_q P_q^\top x_i \in \mathbb{R}^p$ — Reconstructed vector mapped back into the data space
+> 
+> #### Mapping Chain
+> We project $x_i$ into the lower-dimensional space $z_i$, then reconstruct $\hat{x}_i$ in the original data space:
+> 
+> $$x_i \longrightarrow z_i \longrightarrow \hat{x}_i$$
+> 
+> $$x_i \xrightarrow{\quad P_q^\top \quad} P_q^\top x_i \xrightarrow{\quad P_q \quad} P_q(P_q^\top x_i) = \hat{x}_i$$
 
 Note that the matrix $P_q$ has the following properties:
 

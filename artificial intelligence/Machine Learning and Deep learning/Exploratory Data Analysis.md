@@ -11,7 +11,15 @@ Data can be of various kinds:
 - **Ordered** data
 - $...$
   
-
+> [!warning] Types of Data
+>
+> | Type        | Subtype | Description                                                | Examples                                        | Statistics allowed                                  |
+> | ----------- | ------- | ---------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------- |
+> | Categorical | **Nominal** | Labels; only distinguish one from another. Operators: $=, \neq$ | Zip code, eye colour, sex                       | Mode, entropy, contingency, $\chi^2$ test           |
+> | Categorical | **Ordinal** | Labels with a total order. Operators: $<, >, \leq, \geq$   | Mineral hardness; bad, fair, good, excellent    | Median, percentiles, rank correlation               |
+> | Numerical   | **Interval** | Differences are meaningful. Operators: $+, -$             | Calendar dates, temperature in °C or °F         | Mean, std, Pearson correlation, $t$ and $F$ tests   |
+> | Numerical   | **Ratio**   | A true zero; all arithmetic operations                     | Kelvin temperature, mass, length, counts        | Geometric and harmonic mean, percentage variation   |
+>
 ## Summary statistics
 
 >[!note] Location: **mean**, **median**.
