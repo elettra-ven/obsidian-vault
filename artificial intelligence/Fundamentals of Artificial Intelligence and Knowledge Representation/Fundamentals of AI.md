@@ -4,7 +4,7 @@
 ---
 
 >[!NOTE] Intelligence
->It can be described as the capacity of logic, understanding, self-awareness, learning, creativity, problem-solving, …
+>It can be described as the capacity of [[logic]], understanding, self-awareness, learning, creativity, problem-solving, …
 >Some feature of human intelligence can be simulated by machines.
 
 To be deemed as "intelligent", the machine must pass the **Turing Test** and have the following abilities:

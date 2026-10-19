@@ -36,7 +36,7 @@ Heuristics weights are empirically motivated by **causal and diagnostic reasonin
 While **logical assertions** distinguish worlds that are possible from worlds that are impossible, **probabilistic assertions** assign a value (plausibility) to each possible world.
 
 >[!info] Probability $vs$ Fuzzy logic
->Probability represent the uncertainty about a fact (incomplete knowledge), while fuzzy logic measures the vagueness of a concept (used when the problem has no sharp boundaries).
+>Probability represent the uncertainty about a fact (incomplete knowledge), while **fuzzy** **logic** measures the vagueness of a concept (used when the problem has no sharp boundaries).
 
 Probability has different interpretations:
 * **Frequentist**:
