@@ -60,7 +60,7 @@ $$ATP^{4-} + H_2O \ \longleftrightarrow \ ADP^{3-} + HPO_4^{2-} + H^+$$ Under st
 ### How do cells use **ATP**?
 **1. Biosynthesis**  
 ATP drives anabolic reactions by coupling the energetically unfavourable formation of macromolecules (proteins, nucleic acids, polysaccharides, lipids) to ATP hydrolysis. 
-Monomers are first activated (e.g., amino acids to aminoacyl-tRNA, nucleotides to NTPs), and polymerization is then driven forward by pyrophosphate ($PPi$) hydrolysis by pyrophosphatase, which makes the overall $\Delta G$ strongly negative.
+Monomers are first activated (e.g., [[02 - Amminoacidi|amino acids]] to aminoacyl-tRNA, nucleotides to NTPs), and polymerization is then driven forward by pyrophosphate ($PPi$) hydrolysis by pyrophosphatase, which makes the overall $\Delta G$ strongly negative.
 
 **2. Contraction**  
 In muscle cells, filaments of protein repeatedly slide past each other to achieve contraction of the cell.

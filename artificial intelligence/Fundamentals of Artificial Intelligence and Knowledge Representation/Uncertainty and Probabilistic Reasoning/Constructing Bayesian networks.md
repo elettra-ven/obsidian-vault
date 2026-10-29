@@ -236,6 +236,8 @@ More generally, this is a form of **==density estimation==**.
 
 ## 1. PGM (Probabilistic graphic models)
 
+Graphs used to represent a **joint probability distribution** compactly.
+
 >[!info] Markov networks
 >Undirected graphs with **compatibility factors**.
 >There are symmetric relationships and constraints between variables.

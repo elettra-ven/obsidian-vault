@@ -658,6 +658,7 @@ eigenvalues
 ```r
 screeplot(pca, type = "lines", main = "Scree Plot from prcomp")
 ```
+![[img/Pasted image 20261020165653.png]]
 
 Because `prcomp()` uses the $n-1$ sample-covariance convention, these eigenvalues are on a slightly different scale from eigenvalues computed earlier with denominator $n$. Explained-variance ratios are unaffected.
 
@@ -697,6 +698,7 @@ plot(
 abline(h = c(0.8, 0.9, 0.95), lty = 2)
 ```
 
+![[img/Pasted image 20261020165718.png]]
 ## 2.7 Projection into the Latent Space
 
 It is important to distinguish three objects:

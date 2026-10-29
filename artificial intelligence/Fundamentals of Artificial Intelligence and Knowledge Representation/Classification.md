@@ -89,15 +89,8 @@ The shattering power of a classification model (binary case only, for simplicity
 >   test set with labels known but hidden from the model; compare predicted and true labels
 >3. Use the model on **new individuals**
 
-### Cross-validation
-One split gives one estimate; a different random split gives a different test error. This can vary a lot on small data sets.
-
-**Cross Validation** splits data into $k$ folds (e.g. $k=5$).
-In the $i$-th round, fold $i$ is the **test set** and the others the **training** **set**.
-- $k$ models, each tested on data it has not seen; report **mean and standard deviation** of the $k$ errors
-
-**The test set is the future:** never learn from it, never choose by looking at it (otherwise its error is no longer an honest estimate). 
-Same for anything computed from data before the split $\implies$ ==data leakage==.
+### [[Model Selection and Reliable Estimates#Cross-validation|Cross-validation]]
+![[img/Pasted image 20261022155256.png|448]]
 
 ## Decision trees
 
@@ -315,7 +308,6 @@ DT building is a **greedy** algorithm, it doesn't guarantee the best possible re
 - At each decision point: the choice with the maximum **immediate gain**
 - A sequence of individually sub-optimal choices could lead to a better final result (greedy can get stuck in a local optimum)
 
----
 
 >[!important] Conclusion
 >- Decision trees: the best starting point for supervised learning (it's easy to understand, to implement, and to use)
@@ -323,5 +315,6 @@ DT building is a **greedy** algorithm, it doesn't guarantee the best possible re
 >- Predict discrete values (the class) from continuous or discrete attributes
 
 
-
+---
+# $\rightarrow$ [[Performance Measures of a Classifier]]
 

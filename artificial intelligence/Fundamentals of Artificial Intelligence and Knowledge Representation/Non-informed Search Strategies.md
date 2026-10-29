@@ -14,6 +14,7 @@ Let's implement this:
 ![[img/Pasted image 20260924155213.png]]The *fringe* is the set of node that are not yet expanded.
 
 # Non-informed search strategies
+
 >Do not use any domain knowledge and apply rules arbitrarily.
 >They are **not exhaustive** search strategies and they become impractical for complex problems.
 
