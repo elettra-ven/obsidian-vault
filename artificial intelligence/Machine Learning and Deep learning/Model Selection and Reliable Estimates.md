@@ -99,7 +99,7 @@ Every estimate has an **error bar** that shrinks as $1/\sqrt{N}$
 - Report estimate and uncertainty, never the estimate alone
 - Prefer the simpler model, when noise is heavily present
 
-We can use the calculated error of decision tree leaves to **prune** statistically the branches (sub-trees) that would be too small and too uncertain.
+We can use the calculated error of decision tree leaves to **[[Decision Trees#Pruning|prune]]** statistically the branches (sub-trees) that would be too small and too uncertain.
 
 >[!quote] Statistical pruning
 >- $e_i :$ weighted pessimistic error of its leaves

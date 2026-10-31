@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "d7eef3594d49f9c5",
+        "id": "7775ed60a4be6c29",
         "type": "tabs",
         "children": [
           {
-            "id": "740314dee356e319",
+            "id": "8f72f080a6036a27",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "artificial intelligence/Machine Learning and Deep learning/Decision Trees.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Decision Trees"
+            }
+          },
+          {
+            "id": "9fc55609a0b3ce32",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,20 +36,21 @@
             }
           },
           {
-            "id": "185a0abe8c5fdf4b",
+            "id": "10cb8df33c4bda4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 3 - Introduction to Statistics.md",
+                "file": "artificial intelligence/Machine Learning and Deep learning/Performance Measures of a Classifier.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Module 3 - Introduction to Statistics"
+              "title": "Performance Measures of a Classifier"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "strip",
+                "query": "strips",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,11 +127,11 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 3 - Introduction to Statistics.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "artificial intelligence/Machine Learning and Deep learning/Decision Trees.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": false
@@ -131,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Logic.md",
+                "file": "artificial intelligence/Machine Learning and Deep learning/Decision Trees.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -183,7 +198,8 @@
               "title": "Struttura di INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -201,48 +217,48 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "740314dee356e319",
+  "active": "10cb8df33c4bda4d",
   "lastOpenFiles": [
-    "img/Pasted image 20261026144338.png",
-    "img/Pasted image 20261026142930.png",
-    "img/Pasted image 20261026142354.png",
-    "img/Pasted image 20261026132812.png",
-    "img/Pasted image 20261026132531.png",
-    "img/Pasted image 20261022162857.png",
-    "img/Pasted image 20261022162818.png",
-    "img/Pasted image 20261022155256.png",
-    "img/Pasted image 20261022154213.png",
-    "img/Pasted image 20261021123930.png",
-    "img/Pasted image 20261020165718.png",
-    "artificial intelligence/Machine Learning and Deep learning/Performance Measures of a Classifier.md",
-    "desktop.ini",
-    "artificial intelligence/Machine Learning and Deep learning/Exploratory Data Analysis.md",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Classical Propositional Logic.md",
-    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 3 - Introduction to Statistics.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Classification.md",
-    "artificial intelligence/Machine Learning.md",
-    "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
-    "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
-    "artificial intelligence/Machine Learning and Deep learning/Model Selection and Reliable Estimates.md",
-    "bioinformatics/Biochemistry and Metabolomics/04 - Proteine fibrose.md",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Truth and Logical Consequence.md",
+    "img/Pasted image 20261031125429.png",
+    "img/Pasted image 20261029163351.png",
+    "img/Pasted image 20261029162905.png",
+    "img/Pasted image 20261029154123.png",
+    "img/Pasted image 20261029153905.png",
+    "img/Pasted image 20261029105935.png",
+    "img/Pasted image 20261029105909.png",
+    "img/Pasted image 20261029105847.png",
+    "img/Pasted image 20261029104354.png",
+    "img/Pasted image 20261029104350.png",
+    "img/Pasted image 20261029104144.png",
+    "artificial intelligence/Machine Learning and Deep learning/Decision Trees.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Automated Planning.md",
-    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Local Search.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Games Theory.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Classification.md",
+    "artificial intelligence/Machine Learning and Deep learning/Data Lakes.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Mining.md",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Logic.md",
-    "bioinformatics/Biochemistry and Metabolomics/0uhhh - Emostasi e coagulazione.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/Deductive Planning.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/APPLICATION OF RESOLUTIONS.md",
-    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/TRANSFORMATION INTO CLAUSES.md",
+    "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
+    "artificial intelligence/Machine Learning and Deep learning/Exploratory Data Analysis.md",
+    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
+    "artificial intelligence/Machine Learning and Deep learning/Logistic Regression.md",
+    "artificial intelligence/Machine Learning and Deep learning/Model Selection and Reliable Estimates.md",
+    "artificial intelligence/Machine Learning and Deep learning/Naïve Bayes classifier.md",
+    "artificial intelligence/Machine Learning and Deep learning/Performance Measures of a Classifier.md",
+    "artificial intelligence/Machine Learning and Deep learning/Running example - Nordic Mart.md",
+    "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Clustering.md",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 3 - Introduction to Statistics.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Proof Theory.md",
+    "Senza nome.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Classical Propositional Logic.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Truth and Logical Consequence.md",
+    "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Module 2 - Principal Component Analysis.md",
+    "bioinformatics/Biochemistry and Metabolomics/Metabolism.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE/INTRODUCTION TO LANGUAGES FOR ARTIFICIAL INTELLIGENCE.md",
+    "bioinformatics/Biochemistry and Metabolomics/Chemical reactions in cells.md",
+    "desktop.ini",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
     "artificial intelligence/Artificial Intelligence_ A Modern Approach.pdf",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Problem-Solving.canvas",
-    "bioinformatics/Biochemistry and Metabolomics/Domande.md",
-    "bioinformatics/Biochemistry and Metabolomics/02 - Amminoacidi.md",
-    "bioinformatics/Biochemistry and Metabolomics/03 - Struttura delle proteine e folding.md",
-    "bioinformatics/Biochemistry and Metabolomics/01 - Fondamenti chimici.md",
-    "Asparagina (Asn).md",
-    "bioinformatics/Biochemistry and Metabolomics/Chemical reactions in cells.md",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI",
     "personal-git-ignore/feminism",
     "artificial intelligence/Statistical and Mathematical Methods for Artificial Intelligence/Statistical and Mathematical Methods for Artificial Intelligence.canvas",

@@ -1,4 +1,4 @@
->[!info] Proof
+>[!info] [[Proof Theory|Proof]]
 >It's a finite data type that can be used to verify [[Truth and Logical Consequence|logical consequences]]
 
 - **[[#1. Syntax for PL|Syntax]]**
@@ -125,15 +125,110 @@ It models the relationships between truth values of atoms and truth values of fo
 #### Evaluation of a formula (RECURSIVE)
 
 >[!question] For example:
->$$G \stackrel{?}{=} (P\vee Q)\wedge \neg(P\wedge Q)$$
+>$$G \triangleq (P\vee Q)\wedge \neg(P\wedge Q)$$
 >
 >*It's the definition of* `XOR`
 
-| $P$ | $Q$ | $(P\vee Q)$ | $(P\wedge Q)$ | $\neg(P\wedge Q)$ | $(P\vee Q)\wedge \neg(P\wedge Q)$ |
-| --- | --- | ----------- | ------------- | ----------------- | --------------------------------- |
-| 0   | 0   | 0           | 0             | 1                 | 0                                 |
-| 0   | 1   | 1           | 0             | 1                 | 1                                 |
-| 1   | 0   | 1           | 0             | 1                 | 1                                 |
-| 0   | 1   | 1           | 1             | 0                 | 0                                 |
+| $P$   | $Q$   | $(P\vee Q)$ | $(P\wedge Q)$ | $\neg(P\wedge Q)$ | $(P\vee Q)\wedge \neg(P\wedge Q)$ |
+| ----- | ----- | ----------- | ------------- | ----------------- | --------------------------------- |
+| **0** | **0** | 0           | 0             | 1                 | **0**                             |
+| **0** | **1** | 1           | 0             | 1                 | **1**                             |
+| **1** | **0** | 1           | 0             | 1                 | **1**                             |
+| **0** | **1** | 1           | 1             | 0                 | **0**                             |
 Each line is an **interpretation**.
 ==The **models** are the lines in which the formula is true.==
+
+## Inconsistency
+
+A formula is **inconsistent** if it's ==🔴false in all its interpretation==.
+It's also said to be **unsatisfiable**.
+
+>[!done] A formula is valid if its negation is inconsistent (and vice versa)
+
+>[!warning] Invalid formula ($\neq$ Inconsistent)
+>A formula is **invalid** iff there is at least an interpretation in which it's false.
+
+## Logical Equivalence
+
+Two formulas $F$ and $G$ are logically equivalent $F \equiv G$ iff the truth values of $F$ and $G$ are the same under every interpretation of the two.
+
+$$
+\begin{align*}
+(P \wedge Q) &\equiv (Q \wedge P) && \text{commutativity of } \wedge \\
+(P \vee Q) &\equiv (Q \vee P) && \text{commutativity of } \vee \\
+((P \wedge Q) \wedge R) &\equiv (P \wedge (Q \wedge R)) && \text{associativity of } \wedge \\
+((P \vee Q) \vee R) &\equiv (P \vee (Q \vee R)) && \text{associativity of } \vee \\
+\neg(\neg P) &\equiv P && \text{double-negation elimination} \\
+(P \rightarrow Q) &\equiv (\neg Q \rightarrow \neg P) && \text{contraposition} \\
+(P \rightarrow Q) &\equiv (\neg P \vee Q) && \text{implication elimination} \\
+(P \leftrightarrow Q) &\equiv ((P \rightarrow Q) \wedge (Q \rightarrow P)) && \text{biconditional elimination} \\
+\neg(P \wedge Q) &\equiv (\neg P \vee \neg Q) && \text{de Morgan} \\
+\neg(P \vee Q) &\equiv (\neg P \wedge \neg Q) && \text{de Morgan} \\
+(P \wedge (Q \vee R)) &\equiv ((P \wedge Q) \vee (P \wedge R)) && \text{distributivity of } \wedge \text{ over } \vee \\
+(P \vee (Q \wedge R)) &\equiv ((P \vee Q) \wedge (P \vee R)) && \text{distributivity of } \vee \text{ over } \wedge
+\end{align*}
+$$
+
+> [!example] Proof: $(P \wedge Q) \vee Q \equiv Q$
+> $$
+> \begin{aligned}
+> (P \wedge Q) \vee Q
+> &\equiv (P \wedge Q) \vee (Q \wedge \top) && \text{identity: } Q \equiv Q \wedge \top \\
+> &\equiv (Q \wedge P) \vee (Q \wedge \top) && \text{commutativity of } \wedge \\
+> &\equiv Q \wedge (P \vee \top) && \text{distributivity of } \wedge \text{ over } \vee \text{ (factoring out } Q) \\
+> &\equiv Q \wedge \top && \text{domination: } P \vee \top \equiv \top \\
+> &\equiv Q && \text{identity}
+> \end{aligned}
+> $$
+>
+> This is the **absorption law**: $(P \wedge Q) \vee Q \equiv Q$.
+>
+> **Sanity check (truth table):** if $Q$ is true, the whole expression is true. If $Q$ is false, both $P \wedge Q$ and $Q$ are false, so the expression is false. It always matches $Q$.
+
+---
+# Standard forms
+
+## 1. Conjunctive Normal Form (CNF)
+A formula $F$ in in CNF iff it is in **Negation Normal Form** and it has the form:
+$$F \triangleq F_1 \wedge ... \wedge F_n$$
+where each $F_i$ is a disjunction of literals.
+## 2. Disjunctive Normal Form (DNF)
+A formula $F$ in in DNF iff it is in **Negation Normal Form** and it has the form:
+$$F \triangleq F_1 \vee ... \vee F_n$$
+where each $F_i$ is a conjunction of literals.
+
+Any formula can be transformed into a normal form by using the equivalence rules given above.
+
+>[!example] Transforming a formula in CNF
+>**Starting formula**: $(P \implies Q) \wedge \neg(\neg R \wedge (B \vee A))$
+>$$\equiv (\neg P \vee Q) \wedge \neg(\neg R \wedge (B\vee A))$$
+>$$\equiv (\neg P \vee Q) \wedge (\neg \neg R \vee \neg(B\vee A))$$
+>$$\equiv (\neg P \vee Q) \wedge (R \vee \neg B \wedge \neg A)$$
+>$$\equiv (\neg P \vee Q) \wedge (R \vee \neg B) \wedge (R \vee \neg A)$$
+>It's a **conjunction of disjunctions**.
+
+---
+## Deduction theorem
+
+*Given a set of formulas $\{F_1, ..., F_n\}$ and a formula $G$, $(F_1 \wedge ...\wedge F_n) \models G$ if and only if $(F_1 \wedge ...\wedge F_n) \rightarrow G$*.
+
+> [!done] Proof: $F_1 \wedge \cdots \wedge F_n \models G \iff \models (F_1 \wedge \cdots \wedge F_n) \rightarrow G$
+>
+> - **$\Rightarrow$** For each interpretation $I$ in which $F_1 \wedge \cdots \wedge F_n$ is true, $G$ is true, so $I \models (F_1 \wedge \cdots \wedge F_n) \rightarrow G$. 
+> However, for every interpretation $I'$ in which $F_1 \wedge \cdots \wedge F_n$ is false, $(F_1 \wedge \cdots \wedge F_n \rightarrow G)$ is true, thus $I' \models (F_1 \wedge \cdots \wedge F_n) \rightarrow G$. 
+> Therefore, $\models (F_1 \wedge \cdots \wedge F_n) \rightarrow G$.
+>
+>-  **$\Leftarrow$** For every interpretation we have that when $F_1 \wedge \cdots \wedge F_n$ is true, $G$ is true, therefore $(F_1 \wedge \cdots \wedge F_n) \models G$.
+
+We can prove logical consequence by proving validity of a formula.
+## Proof by refutation
+
+*Given a set of formulas $\{F_1, ..., F_n\}$ and a formula $G$, $(F_1 \wedge ...\wedge F_n) \models G$ if and only if $(F_1 \wedge ...\wedge F_n \wedge \neg G)$ is **inconsistent***.
+
+> [!done] Proof: $F_1 \wedge \cdots \wedge F_n \models G \iff F_1 \wedge \cdots \wedge F_n \wedge \neg G$ is inconsistent
+>
+> $(F_1 \wedge \cdots \wedge F_n) \models G$ holds iff for every interpretation under which $F_1 \wedge \cdots \wedge F_n$ is true also $G$ is true. 
+> 
+> This holds iff there is no interpretation for which $F_1 \wedge \cdots \wedge F_n$ is true and $G$ is false, but this happens precisely when $F_1 \wedge \cdots \wedge F_n \wedge \neg G$ is false for every interpretation, i.e. when $F_1 \wedge \cdots \wedge F_n \wedge \neg G$ is inconsistent.
+
+We can prove logical consequence by refuting a given formula, i.e. by proving a given formula is inconsistent.

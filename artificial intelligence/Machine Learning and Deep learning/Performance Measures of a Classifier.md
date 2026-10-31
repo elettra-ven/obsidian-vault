@@ -154,44 +154,60 @@ It ranges from:
 - ...to 1 (perfect), uses all four cells of the matrix and is therefore robust with imbalance.
 
 ---
-
-## The cost of errors
-
-In practice predictions drive decisions and mistakes cost money or worse. Granting a loan to a bad payer is not the same as refusing a good one; a false oil-spill alarm is not the same as an undetected spill; an unexpected plant failure is usually more expensive than a false fault prediction; mailing someone who won't buy is cheaper than ignoring a promising customer.
-
-The tree beats "nobody" but loses to "everybody", which is embarrassing for a model, and raises the question of whether we can do better with the very same model.
-
-There are two main ways of making a classification pipeline cost-aware. The first is **cost-sensitive learning**, where we make the learner itself weigh the expensive errors more. This can be done by _resampling_ (altering the class proportions in the training data, for instance duplicating the examples of the costly class, which is also a remedy for imbalanced classes) or by _instance weights_ if the algorithm supports them, as in `DecisionTreeClassifier(class_weight={0: 1, 1: 10})` or `class_weight="balanced"`, which weights classes inversely to their frequency. The second way is to keep the model as it is and change the decision threshold, which is the subject of the next section.
-
----
 ## Probabilistic classifiers
 
-A classifier can give a **crisp** prediction (just a class label) or a **probabilistic**, or _soft_, prediction (one probability per class). The choice depends on the use: if the decision is immediate and automatic, a crisp label is enough, but if the prediction is one step in a larger process, such as ranking, a limited budget or a human check, the probabilities are far more useful.
+A classifier can give a **crisp** prediction (just a class label) or a **probabilistic**, or _soft_, prediction (one probability per class). 
 
-Many classifiers that look crisp actually hide probabilities. A decision tree leaf contains training records of various classes, and the fractions of those records are the predicted probabilities. In the iris example, the rightmost leaf holds 26 flowers split 1/2/23, giving the probability vector $(0.04, 0.08, 0.88)$. The caveat is that small leaves give unreliable probabilities, and the NordicMart tree has only 13 leaves, hence only 13 distinct probability values.
+The choice depends on the use: 
+- if the decision is **immediate** and **automatic**, a **crisp** label is enough
+- if the prediction is one step in a **larger process**, such as ranking, a limited budget or a human check, the **probabilities** are far more useful.
 
-To go from probabilities back to a crisp label, in the binary case we choose a **threshold** $t$ on $P(\text{positive})$. The default is $t=0.5$, but any value is legitimate. For multi-class problems we simply pick the class with maximum probability. Changing $t$ changes the confusion matrix: lowering it makes the model predict positive more often, so recall goes up while precision usually goes down.
+>[!info] Many classifiers that look crisp actually hide probabilities. 
+>A decision tree leaf contains training records of various classes, and the fractions of those records are the predicted probabilities.
 
-The NordicMart plot of precision, recall and F1 against the threshold shows exactly this seesaw. At very low thresholds recall approaches 1 but precision collapses toward the base rate of 12%. Around the default 0.5, precision is about 0.48 and recall about 0.24, and past roughly 0.73 nobody is flagged any more, so everything drops to zero. Plotting the total cost against the threshold is where the payoff comes: with a threshold of about 0.15 the cost falls to €6,460, better than both trivial strategies (€10,800 and €7,920). Nothing about the model changed; only the operating point did.
+How to go from probabilities back to a crisp label:
+- Binary case:
+	We choose a **threshold** $t$ on $P(\text{positive})$. 
+	The default is $t=0.5$, but any value is legitimate. 
+- Multi-class problems:
+	we simply pick the class with maximum probability. 
 
 ### Lift and cumulative gains
+The **cumulative gains** curve plots the percentage of all positives found within the top $x\%$ of the ranking; 
+- random choice gives a straight diagonal line 
+- a perfect model climbs steeply to 100% and then stays flat.
 
-If we only care about _ranking_ customers, we can sort the test records by decreasing $P(\text{positive})$ and look at the top $x\%$. The **cumulative gains** curve plots the percentage of all positives found within the top $x\%$ of the ranking; random choice gives a straight diagonal line, and a perfect model climbs steeply to 100% and then stays flat. **Lift** is gains divided by $x$, i.e. how many times better than random selection we are at that depth. Notice that only the order of the scores matters here, not the actual probability values. For NordicMart, lift starts very high among the first few customers contacted (above 5) and decays toward 1 as we contact everybody, since contacting 100% of customers is by definition random.
+>[!info] Lift
+>$$Lift = \frac{gains}{x}$$
+>For example:
+>*How many times better than random selection we are at that depth?* 
 
 ### The ROC curve
 
-The ROC (Receiver Operating Characteristic) curve comes from radar signal detection in World War II, where the problem was the trade-off between the hit rate and false alarms in a noisy channel. The picture is of signal plus noise: two overlapping distributions, one for negatives and one for positives, and a threshold somewhere between them. Moving the threshold trades hits against false alarms, and the practical problem is to set it according to the requirements of the application.
+The ROC (Receiver Operating Characteristic) curve comes from radar signal detection in World War II, where the problem was the trade-off between the hit rate and false alarms in a noisy channel. 
+![[img/Pasted image 20261029153905.png|379]]
 
-Each threshold gives one point in a plane whose axes are the **TP rate** $TP/T_{pos}$ (which is just recall) and the **FP rate** $FP/T_{neg}$ (which equals 1 − specificity). Sweeping the threshold from high to low draws the curve. The more separated the two distributions, the more the curve bulges toward the top-left corner; with no separation it hugs the diagonal.
+The picture is of signal plus noise: 
+	two overlapping distributions, one for negatives and one for positives, and a threshold somewhere between them. 
 
-To draw it from data: sort the test records by decreasing $P(\text{positive})$ and start at $(0,0)$, which corresponds to a threshold above every probability (nothing predicted positive). Lower the threshold to the next probability value; if the record that enters is a true positive, take a step up, if it is a negative, take a step right, and if several records tie, take a diagonal step. You end at $(1,1)$, where everything is predicted positive. The slide's hand-drawn example uses 20 NordicMart customers, 5 churners and 15 non-churners, and gives an area of 0.76.
+Moving the threshold trades hits against false alarms, and the practical problem is to set it according to the requirements of the application.
 
-On the full NordicMart test set (900 customers, only 13 distinct probabilities, hence a curve with 13 corner points), the default threshold $t=0.5$ corresponds to TP rate 0.24 and FP rate 0.04, a conservative point in the bottom-left. The threshold $t=0.15$, the cost-optimal one, sits at TP rate 0.51 and FP rate 0.15, a point further up and right on the same curve. The two operating points live on one and the same model.
+The more separated the two distributions, the more the curve bulges toward the top-left corner:
+![[img/Pasted image 20261031125429.png|448]]
+#### AUC
 
-The **area under the ROC curve (AUC)** summarizes the whole curve in one number, independent of any threshold. It is 1 for a perfect ranking and 0.5 for a random one. It has a nice probabilistic meaning: it is the probability that a randomly chosen positive gets a higher score than a randomly chosen negative. It is also insensitive to class proportions. In scikit-learn you use `roc_auc_score`, or `scoring="roc_auc"` for model selection. The NordicMart tree has AUC = 0.71.
+The **area under the ROC curve (AUC)** summarizes the whole curve in one number, independent of any threshold. 
+- $1$ for a perfect ranking 
+- $0.5$ for a random ranking
+
+>[!info] AUC probabilistic meaning
+> It is the probability that a randomly chosen positive gets a higher score than a randomly chosen negative. 
+> It is also insensitive to class proportions.
 
 ### The precision–recall curve
 
-Using the same thresholds but plotting recall against precision gives the **precision–recall curve**. Its random level is not a diagonal but a horizontal line at the positive rate (12% here). It is more informative than the ROC curve when positives are rare, because ROC can look comfortable when there are very many negatives (the FP rate stays small even if there are lots of false alarms in absolute terms, which hurts precision). Its summary number is the **average precision**, 0.29 for NordicMart, to be compared with the 0.12 of random guessing.
+Using the same thresholds but plotting recall against precision gives the **precision–recall curve**. 
+Its random level is not a diagonal but a horizontal line at the positive rate. 
 
--
+>[!info] When to use it
+>It is more informative than the ROC curve when positives are rare, because ROC can look comfortable when there are very many negatives (the **False Positive** ($FP$) rate stays small even if there are lots of false alarms in absolute terms, which hurts precision).
