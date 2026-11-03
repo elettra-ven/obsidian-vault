@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Proof Theory.md",
+                "file": "bioinformatics/Biologia Molecolare/Cromatina e istoni.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Proof Theory"
+              "title": "Cromatina e istoni"
             }
           },
           {
@@ -105,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "8be6c960a1d6b93d",
@@ -214,6 +213,13 @@
   },
   "active": "9fc55609a0b3ce32",
   "lastOpenFiles": [
+    "img/Pasted image 20261103104025.png",
+    "Pasted image 20261103104025.png",
+    "bioinformatics/Biologia Molecolare/Enzimi di Restrizione.md",
+    "bioinformatics/Biologia Molecolare/Cromatina e istoni.md",
+    "bioinformatics/Biologia Molecolare/Struttura di DNA e RNA.md",
+    "bioinformatics/Biologia Molecolare/Topologia del DNA.md",
+    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Proof Theory.md",
     "img/Pasted image 20261102101928.png",
     "img/Pasted image 20261102100840.png",
     "img/Pasted image 20261102095553.png",
@@ -221,7 +227,6 @@
     "img/Pasted image 20261102094138.png",
     "img/Pasted image 20261102093854.png",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Independence.md",
-    "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI/Proof Theory.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/First Order Logic.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Knowledge Representation/Deductive Planning.md",
     "artificial intelligence/Machine Learning and Deep learning/Decision Trees.md",
@@ -235,8 +240,6 @@
     "Pasted image 20261102101928.png",
     "Pasted image 20261102100840.png",
     "Pasted image 20261102095553.png",
-    "Pasted image 20261102095041.png",
-    "Pasted image 20261102094138.png",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Uncertainty and Probabilistic Reasoning/Introduction to uncertainty and probabilistic reasoning.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Artificial Intelligence Applications.md",
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge R..canvas",
@@ -248,10 +251,6 @@
     "artificial intelligence/Fundamentals of Artificial Intelligence and Knowledge Representation/Classification.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Lakes.md",
     "artificial intelligence/Machine Learning and Deep learning/Data Mining.md",
-    "artificial intelligence/Machine Learning and Deep learning/Data Warehouses.md",
-    "artificial intelligence/Machine Learning and Deep learning/Exploratory Data Analysis.md",
-    "artificial intelligence/Machine Learning and Deep learning/Industry 5.0.md",
-    "artificial intelligence/Machine Learning and Deep learning/Logistic Regression.md",
     "desktop.ini",
     "artificial intelligence/Artificial Intelligence_ A Modern Approach.pdf",
     "artificial intelligence/LANGUAGES AND ALGORITHMS FOR ARTIFICIAL INTELLIGENCE/Languages and Algorithms for AI",
